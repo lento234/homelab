@@ -1,0 +1,6 @@
+name: homelab
+dependencies:
+  - pip
+  - python=3.9
+  - pip:
+    - -r requirements.txt
