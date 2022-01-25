@@ -28,6 +28,10 @@ Ansible-based personal homelab setup.
 ## References
 
 - [geerlingguy/ansible-for-devops](https://github.com/geerlingguy/ansible-for-devops) - Ansible for DevOps examples.
-- [davestephens/ansible-nas](https://github.com/davestephens/ansible-nas) -  Build a full-featured home server or NAS replacement with an Ubuntu box and this playbook.
-- [notthebee/infra](https://github.com/notthebee/infra): IaC for my Linux/Unix machines
--
+- [davestephens/ansible-nas](https://github.com/davestephens/ansible-nas) - Build a full-featured home server or NAS replacement with an Ubuntu box and this playbook.
+- [notthebee/infra](https://github.com/notthebee/infra) - IaC for my Linux/Unix machines
+- [HQarroum/awesome-iot](https://github.com/HQarroum/awesome-iot) - :robot: A curated list of awesome Internet of Things projects and resources. 
+- [pfalcon/awesome-smarthome](https://github.com/pfalcon/awesome-smarthome) -  Curated list of awesome SmartHome/Home Automation things (open and leaving users in control) 
+- [awesome-selfhosted/awesome-selfhosted](https://github.com/awesome-selfhosted/awesome-selfhosted) - A list of Free Software network services and web applications which can be hosted on your own servers 
+- [microsoft/IoT-For-Beginners](https://github.com/microsoft/IoT-For-Beginners) - 12 Weeks, 24 Lessons, IoT for All!  
+- 
