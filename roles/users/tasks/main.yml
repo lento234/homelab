@@ -1,0 +1,6 @@
+- name: Add user `lento`
+  ansible.builtin.user:
+    name: lento
+    uid: 1001
+    shell: /bin/zsh
+    group: wheel
