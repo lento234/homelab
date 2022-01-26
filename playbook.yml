@@ -1,3 +1,6 @@
----
 - name: "homelab"
   hosts: all
+  become: true
+  tasks:
+    - name: Ensure htop is installed
+      dnf: name=htop state=present
