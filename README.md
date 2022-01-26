@@ -1,3 +1,7 @@
+<p align="center">
+    <img width="400" align="center" src="assets/homelab-logo.png">
+</p>
+
 # Homelab
 
 Ansible-based personal homelab setup.

@@ -1,6 +1,5 @@
 - name: "homelab"
   hosts: all
-  become: true
   roles:
       - {role: packages, tags: [packages]}
         # - {role: users, tags: [users]}
