@@ -1,0 +1,5 @@
+---
+- name: "Installing common packages"
+  dnf:
+    name: [git, htop, curl, tree]
+    update_cache: true
