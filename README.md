@@ -1,5 +1,5 @@
 <p align="center">
-    <img width="400" align="center" src="assets/homelab-logo.png">
+    <img width="400" align="center" src="assets/homelab-logo.svg">
 </p>
 
 # Homelab
