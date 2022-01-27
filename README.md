@@ -2,12 +2,11 @@
 </br>
     <p><img width="500" align="center" src="assets/homelab-logo.svg"></p>
 
-`Ansible-based personal homelab setup.`
-
 <hr>
 
 [![License](https://img.shields.io/badge/license-MIT-blue?style=flat-square&labelColor=000000)](#license)
 
+`Ansible-based personal homelab setup.`
 </div>
 
 ## Setup
