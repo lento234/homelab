@@ -20,6 +20,9 @@ Ansible-based personal homelab setup.
 - [ ] glances
 - [ ] [home assistant](https://github.com/khuedoan/homelab): My self-hosting infrastructure, fully automated from empty disk to operating services
 - [ ] IOT stack: influxdb, grafana
+- [ ] [Netdata](https://www.netdata.cloud/): Monitor everything in real time.
+- [ ] [portainer.io](https://www.portainer.io/): A centralized service delivery platform for containerized apps
+- [ ] [vaultwarden](https://github.com/dani-garcia/vaultwarden): Alternative implementation of the Bitwarden server API
 
 ## Hardware / software stack
 

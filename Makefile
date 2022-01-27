@@ -1,7 +1,7 @@
 all:
-	ansible-playbook --diff playbook.yml
+	ansible-playbook --diff -K playbook.yml
 dry-run:
-	ansible-playbook --diff --check -vv playbook.yml
+	ansible-playbook --diff --check -vv -K playbook.yml
 ping:
 	ansible all -m ping
 pre-commit:
