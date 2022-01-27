@@ -1,2 +1,4 @@
+skip_list:
+  - package-latest
 exclude_paths:
   - environment.yml

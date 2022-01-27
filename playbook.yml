@@ -1,5 +1,7 @@
 - name: "homelab"
   hosts: all
+
   roles:
-      - {role: packages, tags: [packages]}
-        # - {role: users, tags: [users]}
+      - {role: upgrade, tags: [system]}
+      - {role: packages, tags: [system]}
+      # - {role: users, tags: [users]}

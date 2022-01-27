@@ -1,5 +1,10 @@
 - name: "Installing common packages"
   become: true
   dnf:
-    name: [git, htop, curl, tree, zsh]
-    update_cache: true
+    name:
+      - git
+      - htop
+      - curl
+      - tree
+      - zsh
+    state: present
