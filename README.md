@@ -1,7 +1,6 @@
 <div align="center">
 </br>
     <p><img width="500" align="center" src="assets/homelab-logo.svg"></p>
-</br>
 
 `Ansible-based personal homelab setup.`
 
