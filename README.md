@@ -1,11 +1,17 @@
-<p align="center">
-    <img width="400" align="center" src="assets/homelab-logo.svg">
-</p>
+<div align="center">
+    </br>
+    <p>
+        <img width="500" align="center" src="assets/homelab-logo.svg">
+    </p>
+    </hr>
 
-# Homelab
+[![License](https://img.shields.io/badge/license-MIT-blue?style=flat-square)](#license)
+
+</div>
+
+
 
 Ansible-based personal homelab setup.
-
 ## Setup
 
 ### Hosted services
