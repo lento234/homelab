@@ -1,9 +1,9 @@
 <div align="center">
-    </br>
+</br>
     <p>
         <img width="500" align="center" src="assets/homelab-logo.svg">
     </p>
-    </hr>
+<hr>
 
 [![License](https://img.shields.io/badge/license-MIT-blue?style=flat-square)](#license)
 
