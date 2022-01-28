@@ -1,8 +1,8 @@
 <div align="center">
-</br>
-    <p><img width="500" align="center" src="assets/homelab-logo.svg"></p>
 
-<hr>
+<h1>
+    <img width="500" align="center" src="assets/homelab-logo.svg">
+</h1>
 
 [![License](https://img.shields.io/badge/license-MIT-blue?style=flat-square&labelColor=000000)](#license)
 
