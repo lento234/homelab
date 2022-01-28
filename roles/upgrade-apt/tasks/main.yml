@@ -1,3 +1,9 @@
+- name: Update apt cache
+  become: true
+  apt:
+    update_cache: true
+    cache_valid_time: 3600
+
 - name: Upgrade all packages
   become: true
   apt:
@@ -7,4 +13,5 @@
 - name: Autoremove unneeded packages installed as dependencies
   become: true
   apt:
+    autoclean: true
     autoremove: true
