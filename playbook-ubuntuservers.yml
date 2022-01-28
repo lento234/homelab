@@ -1,0 +1,5 @@
+- name: ubuntuservers
+  hosts: ubuntuservers
+
+  roles:
+      - {role: upgrade-apt, tags: [system]}

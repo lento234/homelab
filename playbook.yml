@@ -1,5 +1,5 @@
-- name: "homelab"
-  hosts: all
+- name: homelab
+  hosts: homelab
 
   roles:
       - {role: upgrade, tags: [system]}

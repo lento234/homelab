@@ -1,0 +1,10 @@
+- name: Upgrade all packages
+  become: true
+  apt:
+    name: "*"
+    state: latest
+
+- name: Autoremove unneeded packages installed as dependencies
+  become: true
+  apt:
+    autoremove: true
