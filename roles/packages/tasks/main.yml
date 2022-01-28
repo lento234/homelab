@@ -1,6 +1,6 @@
 - name: "Installing common packages"
   become: true
-  dnf:
+  package:
     name:
       - git
       - htop
