@@ -1,7 +1,6 @@
-- name: homelab
+- name: Playbook to manage all infra
   hosts: homelab
 
   roles:
-      - {role: upgrade, tags: [system]}
-      - {role: packages, tags: [system]}
-      # - {role: users, tags: [users]}
+    - upgrade
+    - packages
