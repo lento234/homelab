@@ -4,13 +4,13 @@
     update_cache: true
     cache_valid_time: 3600
 
-- name: Upgrade all packages
+- name: Upgrade all apt packages
   become: true
   apt:
     name: "*"
     state: latest
 
-- name: Autoremove unneeded packages installed as dependencies
+- name: Autoremove unneeded apt packages
   become: true
   apt:
     autoclean: true

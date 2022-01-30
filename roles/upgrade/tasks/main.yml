@@ -1,10 +1,5 @@
-- name: Upgrade all packages
-  become: true
-  dnf:
-    name: "*"
-    state: latest
+- include_tasks: RedHat.yml
+  when: ansible_os_family == 'RedHat'
 
-- name: Autoremove unneeded packages installed as dependencies
-  become: true
-  dnf:
-    autoremove: true
+- include_tasks: Debian.yml
+  when: ansible_os_family == 'Debian'
