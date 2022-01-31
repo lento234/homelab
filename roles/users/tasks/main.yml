@@ -1,5 +1,6 @@
-- name: Add user `lento`
-  ansible.builtin.user:
+- name: Add user lento
+  become: true
+  user:
     name: lento
     uid: 1001
     shell: /bin/zsh
