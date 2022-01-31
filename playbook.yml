@@ -2,5 +2,11 @@
   hosts: homelab
 
   roles:
+    - users
     - upgrade
     - packages
+    - role: geerlingguy.docker
+      become: true
+      vars:
+        docker_users:
+          lento
