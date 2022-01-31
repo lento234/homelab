@@ -10,6 +10,7 @@
   register: reboot_required_file
 
 - name: Reboot if required
+  become: true
   reboot:
     msg: Rebooting due to a kernel update
   when: reboot_required_file.stat.exists
