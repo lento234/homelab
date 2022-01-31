@@ -1,4 +1,4 @@
-playbook := "playbooks/manage.yml"
+playbook := "playbooks/maintain.yml"
 
 # default recipe to display help information
 default:
