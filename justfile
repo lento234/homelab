@@ -2,36 +2,36 @@ playbook := "playbook.yml"
 
 # default recipe to display help information
 default:
-  @just --list
+    @just --list
 
 # Run default playbook
 run:
-	ansible-playbook --diff -K {{playbook}}
+    ansible-playbook --diff -K {{playbook}}
 
 # Dry-run default playbook
 dry-run:
-	ansible-playbook --diff --check -vv -K {{playbook}}
+    ansible-playbook --diff --check -vv -K {{playbook}}
 
 # Ping all hosts
 ping:
-	ansible all -m ping
+    ansible all -m ping
 
 # Run pre-commit on all files
 pre-commit:
-	pre-commit run --all-files
+    pre-commit run --all-files
 
 # Start a local development server
 vagrant-start:
-	vagrant up
+    vagrant up
 
 # Pause the local development server
 vagrant-pause:
-	vagrant suspend
+    vagrant suspend
 
 # Stop the local development server
 vagrant-stop:
-	vagrant halt
+    vagrant halt
 
 # Destroy the local development server
 vagrant-clean:
-	vagrant destroy
+    vagrant destroy

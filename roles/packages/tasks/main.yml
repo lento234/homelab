@@ -2,9 +2,10 @@
   become: true
   package:
     name:
+      - curl
       - git
       - htop
-      - curl
       - tree
+      - wget
       - zsh
     state: present
