@@ -5,7 +5,7 @@ driver:
   name: docker
 platforms:
   - name: homelab
-    image: mrlento234/rockylinux8-ansible:latest
+    image: mrlento234/${MOLECULE_DISTRO:-rockylinux8}-ansible:latest
     command: ""
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
