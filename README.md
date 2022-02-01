@@ -4,6 +4,7 @@
     <img width="500" align="center" src="assets/homelab-logo.svg">
 </h1>
 
+![Molecule CI](https://img.shields.io/github/workflow/status/lento234/homelab/CI?style=flat-square)
 [![License](https://img.shields.io/badge/license-MIT-blue?style=flat-square&labelColor=000000)](#license)
 
 ***`Ansible`-based personal homelab setup.***
