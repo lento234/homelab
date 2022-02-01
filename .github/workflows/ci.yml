@@ -14,8 +14,8 @@ jobs:
     strategy:
       matrix:
         distro:
-          - centos8
-          - debian10
+          - rockylinux8
+          - ubuntu2004
 
     steps:
       - name: Check out the codebase
@@ -31,3 +31,7 @@ jobs:
 
       - name: Run molecule
         run: molecule test
+        env:
+          PY_COLORS: '1'
+          ANSIBLE_FORCE_COLOR: '1'
+          MOLECULE_DISTRO: ${{ matrix.distro }}
