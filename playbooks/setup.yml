@@ -3,14 +3,14 @@
 
   roles:
     # Add default user
-    # - users
+    - users
 
     - upgrade
     - packages
 
     # Install docker
-    # - role: geerlingguy.docker
-    #   become: true
-    #   vars:
-    #     docker_users:
-    #       lento
+    - role: geerlingguy.docker
+      become: true
+      vars:
+        docker_users:
+          - "{{ docker_user }}"
