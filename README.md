@@ -33,7 +33,7 @@
 * [x] Raspberry Pi 4 Model B 8GB: [OKdo](https://www.okdo.com/p/okdo-raspberry-pi-4-8gb-model-b-starter-kit/)
 * [x] Boot: Sandisk microSDXC 128GB
 * [x] OS: Rocky Linux 8.5 [wiki](https://wiki.rockylinux.org/en/special-interest-groups/alt-arch/raspberry-pi)
-* [ ] Storage
+* [ ] Storage (*planned*)
 
 
 ## References
