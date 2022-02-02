@@ -1,4 +1,7 @@
-playbook := "playbook-main.yml"
+set export
+
+PLAYBOOK := "playbook-main.yml"
+DRIVER := "docker" # or "vagrant"
 
 # display help information
 help:
@@ -6,11 +9,11 @@ help:
 
 # Run default playbook
 run:
-    ansible-playbook --diff -K {{playbook}}
+    ansible-playbook --diff -K {{PLAYBOOK}}
 
 # Dry-run default playbook
 dry-run:
-    ansible-playbook --diff --check -vv -K {{playbook}}
+    ansible-playbook --diff --check -vv -K {{PLAYBOOK}}
 
 # Ping all hosts
 ping:
@@ -20,18 +23,30 @@ ping:
 pre-commit:
     pre-commit run --all-files
 
-# Start a local development server
-vagrant-start:
-    vagrant up
+# Create/start a local development server
+create:
+    #!/usr/bin/env bash
+    if [ $DRIVER == "docker" ]; then
+        molecule create
+    elif [ $DRIVER == "vagrant" ]; then
+        vagrant up
+    fi
 
-# Pause the local development server
-vagrant-pause:
-    vagrant suspend
-
-# Stop the local development server
-vagrant-stop:
-    vagrant halt
+# Login into the local development server
+login:
+    #!/usr/bin/env bash
+    if [ $DRIVER == "docker" ]; then
+        molecule login
+    elif [ $DRIVER == "vagrant" ]; then
+        vagrant ssh
+    fi
 
 # Destroy the local development server
-vagrant-clean:
-    vagrant destroy
+destroy:
+    #!/usr/bin/env bash
+    if [ $DRIVER == "docker" ]; then
+        molecule destroy
+    elif [ $DRIVER == "vagrant" ]; then
+        vagrant destroy
+    fi
+
