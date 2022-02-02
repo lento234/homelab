@@ -28,6 +28,7 @@
 * [ ] [Netdata](https://www.netdata.cloud/): Monitor everything in real time.
 * [ ] [portainer.io](https://www.portainer.io/): A centralized service delivery platform for containerized apps
 * [ ] [vaultwarden](https://github.com/dani-garcia/vaultwarden): Alternative implementation of the Bitwarden server API
+* [ ] Roborocks: Automated home cleaning robot
 
 ## Hardware / software stack
 
