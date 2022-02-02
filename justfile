@@ -1,7 +1,7 @@
 playbook := "playbook-main.yml"
 
-# default recipe to display help information
-default:
+# display help information
+help:
     @just --list
 
 # Run default playbook
