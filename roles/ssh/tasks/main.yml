@@ -1,0 +1,11 @@
+- name: Make sure SSH is more secure
+  become: true
+  lineinfile:
+    dest: /etc/ssh/sshd_config
+    regexp: "{{ item.regexp }}"
+    line: "{{ item.line }}"
+    state: present
+  with_items:
+    - regexp: "^#?PermitRootLogin"
+      line: "PermitRootLogin no"
+  notify: Restart ssh service
