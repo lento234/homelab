@@ -1,6 +1,6 @@
 set export
 
-PLAYBOOK := "playbook-main.yml"
+PLAYBOOK := "playbook-setup.yml"
 DRIVER := "docker" # or "vagrant"
 
 # display help information
@@ -49,4 +49,3 @@ destroy:
     elif [ $DRIVER == "vagrant" ]; then
         vagrant destroy
     fi
-
