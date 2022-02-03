@@ -1,11 +1,5 @@
-- name: "Installing common packages"
+- name: Installing common packages
   become: true
   package:
-    name:
-      - curl
-      - git
-      - htop
-      - tree
-      - wget
-      - zsh
+    name: "{{ packages }}"
     state: present

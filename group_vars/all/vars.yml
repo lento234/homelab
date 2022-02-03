@@ -1,0 +1,23 @@
+# User settings
+user: lento
+uid: 1001
+shell: /bin/zsh
+group: wheel
+
+# Install packages
+packages:
+  - curl
+  - git
+  - htop
+  - neofetch
+  - rsync
+  - tmux
+  - tree
+  - wget
+  - zsh
+
+# Docker
+docker_user: "{{ user }}"
+
+# Secrets in vault.yml
+password: ''
