@@ -1,7 +1,16 @@
-- name: Add user lento
+- name: Add user {{ user }}
   become: true
   user:
-    name: lento
-    uid: 1001
-    shell: /bin/zsh
-    group: wheel
+    name: "{{ user }}"
+    uid: "{{ uid }}"
+    shell: "{{ shell }}"
+    password: "{{ password | password_hash('sha512') }}"
+    groups:
+      - "{{ group }}"
+      - users
+    append: true
+
+- name: Ensure group "{{ user }}" exists
+  group:
+    name: "{{ user }}"
+    state: present
