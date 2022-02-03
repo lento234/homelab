@@ -41,6 +41,15 @@ login:
         vagrant ssh
     fi
 
+# Test inside the local development server
+test:
+    #!/usr/bin/env bash
+    if [ $DRIVER == "docker" ]; then
+        molecule test
+    else
+        echo "Not implemented yet"
+    fi
+
 # Destroy the local development server
 destroy:
     #!/usr/bin/env bash
