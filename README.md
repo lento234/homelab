@@ -26,10 +26,10 @@
 * [ ] [home assistant](https://github.com/khuedoan/homelab): My self-hosting infrastructure, fully automated from empty disk to operating services
 * [ ] IOT stack: influxdb, grafana
 * [ ] [Netdata](https://www.netdata.cloud/): Monitor everything in real time.
-* [ ] [portainer.io](https://www.portainer.io/): A centralized service delivery platform for containerized apps
+* [x] [portainer.io](https://www.portainer.io/): A centralized service delivery platform for containerized apps
 * [ ] [vaultwarden](https://github.com/dani-garcia/vaultwarden): Alternative implementation of the Bitwarden server API
 * [ ] Roborocks: Automated home cleaning robot
-
+* [x] [Watchtower](https://containrrr.dev/watchtower) - A container-based solution for automating Docker container base image updates.
 ## Hardware / software stack
 
 * [x] Raspberry Pi 4 Model B 8GB: [OKdo](https://www.okdo.com/p/okdo-raspberry-pi-4-8gb-model-b-starter-kit/)

@@ -6,16 +6,20 @@
     # - users
 
     # Configure ssh
-    - ssh
+    # - ssh
 
     # Update and install basic packages
-    - packages
-    - upgrade
+    # - packages
+    # - upgrade
 
     # # Install docker
     # - role: geerlingguy.docker
     #   become: true
 
     # Services
-    - services/dnfautomatic
-    - services/firewalld
+    # - services/dnfautomatic
+    # - services/firewalld
+
+    # Containers
+    # - containers/portainer
+    - containers/watchtower

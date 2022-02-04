@@ -1,0 +1,8 @@
+- name: Deploy watchtower
+  community.docker.docker_container:
+    name: watchtower
+    image: containrrr/watchtower
+    command: --schedule "0 0 4 * * *"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    restart_policy: always

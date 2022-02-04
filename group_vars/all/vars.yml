@@ -41,6 +41,8 @@ ports:
   - 22/tcp    # ssh
   - 80/tcp    # http
   - 443/tcp   # https
+  - 8000/tcp  # portainer
+  - 9000/tcp  # portainer
 
 # Secrets in vault.yml
 password: ''
