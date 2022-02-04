@@ -4,14 +4,17 @@
   roles:
     # Add default user
     # - users
-    # - ssh
 
+    # Configure ssh
+    - ssh
+
+    # Update and install basic packages
     - packages
     - upgrade
 
     # Install docker
-    - role: geerlingguy.docker
-      become: true
-      vars:
-        docker_users:
-          - "{{ docker_user }}"
+    # - role: geerlingguy.docker
+    #   become: true
+    #   vars:
+    #     docker_users:
+    #       - "{{ docker_user }}"
