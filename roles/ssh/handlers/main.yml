@@ -1,4 +1,4 @@
-- name: Restart ssh service
+- name: Restart sshd
   become: true
   service:
     name: sshd

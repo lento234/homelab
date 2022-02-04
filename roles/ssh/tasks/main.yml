@@ -8,4 +8,4 @@
   with_items:
     - regexp: "^#?PermitRootLogin"
       line: "PermitRootLogin no"
-  notify: Restart ssh service
+  notify: Restart sshd
