@@ -1,3 +1,4 @@
 .vagrant/
 hosts.ini
+hosts_debug.ini
 vault.yml
