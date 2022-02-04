@@ -6,7 +6,7 @@
     # - users
 
     # Configure ssh
-    # - ssh
+    - ssh
 
     # Update and install basic packages
     - packages

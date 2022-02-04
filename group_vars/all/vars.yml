@@ -15,12 +15,14 @@ packages:
   - nginx
   - nmap
   - python3-pip
+  - python3-firewall
   - rsync
   - tmux
   - tree
   - wget
   - zsh
 
+# Install python packages
 python_packages:
   - pip
   - pipx
@@ -28,6 +30,12 @@ python_packages:
 # Docker
 docker_users:
   - "{{ user }}"
+
+# Ports (tcp, udp)
+ports:
+  - 22/tcp    # ssh
+  - 80/tcp    # http
+  - 443/tcp   # https
 
 # Secrets in vault.yml
 password: ''

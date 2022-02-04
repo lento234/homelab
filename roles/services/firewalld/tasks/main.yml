@@ -4,9 +4,20 @@
     name: firewalld
     state: present
 
-- name: Ensure firewalld is running
+- name: Configure ports in firewalld
+  become: true
+  ansible.posix.firewalld:
+    state: enabled
+    port: "{{ item }}"
+    zone: public
+    permanent: true
+    immediate: true
+  with_items:
+    - "{{ ports }}"
+
+- name: Ensure firewalld is restarted
   become: true
   service:
     name: firewalld
     enabled: true
-    state: started
+    state: restarted
