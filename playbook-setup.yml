@@ -3,18 +3,19 @@
 
   roles:
     # Add default user
-    - users
+    # - users
 
     # Configure ssh
-    - ssh
+    # - ssh
 
     # Update and install basic packages
-    # - packages
-    # - upgrade
+    - packages
+    - upgrade
 
-    # Install docker
+    # Services
+    - services/dnfautomatic
+    - services/firewalld
+
+    # # Install docker
     # - role: geerlingguy.docker
     #   become: true
-    #   vars:
-    #     docker_users:
-    #       - "{{ docker_user }}"

@@ -1,0 +1,12 @@
+- name: Setup auto updates using dnf-automatic
+  become: true
+  dnf:
+    name: dnf-automatic
+    state: present
+
+- name: Ensure auto updates are enabled
+  become: true
+  service:
+    name: dnf-automatic-install.timer
+    enabled: true
+    state: started

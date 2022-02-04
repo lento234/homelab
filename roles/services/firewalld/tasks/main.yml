@@ -1,0 +1,12 @@
+- name: Install firewalld
+  become: true
+  dnf:
+    name: firewalld
+    state: present
+
+- name: Ensure firewalld is running
+  become: true
+  service:
+    name: firewalld
+    enabled: true
+    state: started
