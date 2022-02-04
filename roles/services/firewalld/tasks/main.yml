@@ -14,10 +14,4 @@
     immediate: true
   with_items:
     - "{{ ports }}"
-
-- name: Ensure firewalld is restarted
-  become: true
-  service:
-    name: firewalld
-    enabled: true
-    state: restarted
+  notify: Restart firewalld
