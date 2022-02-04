@@ -3,14 +3,14 @@
 
   roles:
     # Add default user
-    # - users
+    - users
 
     # Configure ssh
     - ssh
 
     # Update and install basic packages
-    - packages
-    - upgrade
+    # - packages
+    # - upgrade
 
     # Install docker
     # - role: geerlingguy.docker
