@@ -1,5 +1,11 @@
-- name: Installing common packages
+- name: Install common packages
   become: true
   package:
     name: "{{ packages }}"
     state: present
+
+- name: Install common python packages
+  become: true
+  pip:
+    name: "{{ python_packages }}"
+    state: latest

@@ -14,11 +14,16 @@ packages:
   - neofetch
   - nginx
   - nmap
+  - python3-pip
   - rsync
   - tmux
   - tree
   - wget
   - zsh
+
+python_packages:
+  - pip
+  - pipx
 
 # Docker
 docker_users:
