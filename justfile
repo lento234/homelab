@@ -4,6 +4,7 @@ PLAYBOOK := "playbook-setup.yml"
 DRIVER := "vagrant" # or "vagrant"
 DEBUG_HOSTS := "hosts_debug.ini"
 VAULT := "group_vars/all/vault.yml"
+VAULT_PASSWORD_FILE := "pass.key"
 
 # display help information
 help:
@@ -15,7 +16,7 @@ run:
 
 # Dry-run default playbook
 dry-run:
-    ansible-playbook --diff --check -vv -K --ask-vault-password {{ PLAYBOOK }} -i {{ DEBUG_HOSTS }}
+    ansible-playbook --diff --check -vv -K --vault-password-file {{ VAULT_PASSWORD_FILE }} {{ PLAYBOOK }} -i {{ DEBUG_HOSTS }}
 
 # Ping all hosts
 ping:
@@ -49,7 +50,7 @@ test:
     if [ $DRIVER == "docker" ]; then
         molecule test
     else
-        ansible-playbook --diff -v -K --ask-vault-password {{ PLAYBOOK }} -i {{ DEBUG_HOSTS }}
+        ansible-playbook --diff -v -K --vault-password-file {{ VAULT_PASSWORD_FILE }} {{ PLAYBOOK }} -i {{ DEBUG_HOSTS }}
     fi
 
 # Destroy the local development server
@@ -63,4 +64,4 @@ destroy:
 
 # Edit the secret vault file
 vault:
-    ansible-vault edit {{ VAULT }}
+    ansible-vault edit --vault-password-file {{ VAULT_PASSWORD_FILE }} {{ VAULT }}

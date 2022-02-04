@@ -2,3 +2,4 @@
 hosts.ini
 hosts_debug.ini
 vault.yml
+pass.key
