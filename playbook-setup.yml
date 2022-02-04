@@ -12,10 +12,10 @@
     - packages
     - upgrade
 
-    # Services
-    - services/dnfautomatic
-    - services/firewalld
-
     # # Install docker
     # - role: geerlingguy.docker
     #   become: true
+
+    # Services
+    - services/dnfautomatic
+    - services/firewalld
