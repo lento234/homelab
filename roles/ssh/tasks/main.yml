@@ -8,4 +8,6 @@
   with_items:
     - regexp: "^#?PermitRootLogin"
       line: "PermitRootLogin no"
+    - regexp: "^#?PasswordAuthentication"
+      line: "PasswordAuthentication yes"
   notify: Restart sshd
