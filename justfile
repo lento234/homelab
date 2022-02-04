@@ -2,7 +2,7 @@ set export
 
 PLAYBOOK := "playbook-setup.yml"
 DRIVER := "vagrant" # or "vagrant"
-DEBUG_HOSTS := "hosts_debug.ini"
+DEBUG_HOSTS := "hosts.ini"
 VAULT := "group_vars/all/vault.yml"
 VAULT_PASSWORD_FILE := "pass.key"
 
@@ -12,7 +12,7 @@ help:
 
 # Run default playbook
 run:
-    ansible-playbook --diff -K --ask-vault-password {{ PLAYBOOK }}
+    ansible-playbook --diff -K --vault-password-file {{ VAULT_PASSWORD_FILE }} {{ PLAYBOOK }}
 
 # Dry-run default playbook
 dry-run:
