@@ -5,6 +5,7 @@
     regexp: "{{ item.regexp }}"
     line: "{{ item.line }}"
     state: present
+    validate: 'sshd -T -f %s'
   with_items:
     - regexp: "^#?PermitRootLogin"
       line: "PermitRootLogin no"
