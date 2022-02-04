@@ -1,8 +1,10 @@
 # User settings
 user: lento
+group: "{{ user }}"
 uid: 1001
+gid: 1001
 shell: /bin/zsh
-group: wheel
+sudo_group: wheel
 
 # Install packages
 packages:
@@ -19,7 +21,8 @@ packages:
   - zsh
 
 # Docker
-docker_user: "{{ user }}"
+docker_users:
+  - "{{ user }}"
 
 # Secrets in vault.yml
 password: ''

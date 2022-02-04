@@ -1,3 +1,10 @@
+- name: Add group {{ group }}
+  become: true
+  group:
+    name: "{{ group }}"
+    gid: "{{ gid }}"
+    state: present
+
 - name: Add user {{ user }}
   become: true
   user:
@@ -5,12 +12,7 @@
     uid: "{{ uid }}"
     shell: "{{ shell }}"
     password: "{{ password | password_hash('sha512') }}"
+    group: "{{ group }}"
     groups:
-      - "{{ group }}"
-      - users
+      - "{{ sudo_group }}"
     append: true
-
-- name: Ensure group "{{ user }}" exists
-  group:
-    name: "{{ user }}"
-    state: present
