@@ -18,18 +18,18 @@
 * [ ] [homer](https://github.com/bastienwirtz/homer): A very simple static homepage for your server.
 * [ ] nginx: Reverse
 * [ ] [pi-hole](https://github.com/pi-hole/pi-hole): A black hole for internet advertisements
-* [ ] portainer
+* [x] [portainer.io](https://www.portainer.io/): A centralized service delivery platform for containerized apps
+* [x] [Watchtower](https://containrrr.dev/watchtower) - A container-based solution for automating Docker container base image updates.
 * [ ] [nextcloud](https://github.com/nextcloud/server): :cloud: cloud Nextcloud server, a safe home for all your data
 * [ ] [photoprism](https://github.com/photoprism/photoprism):  Photos App powered by Go and Google TensorFlow :rainbow: :sparkles:
 * [ ] [plex media server](https://hub.docker.com/r/linuxserver/plex)
-* [ ] glances
 * [ ] [home assistant](https://github.com/khuedoan/homelab): My self-hosting infrastructure, fully automated from empty disk to operating services
-* [ ] IOT stack: influxdb, grafana
 * [ ] [Netdata](https://www.netdata.cloud/): Monitor everything in real time.
-* [x] [portainer.io](https://www.portainer.io/): A centralized service delivery platform for containerized apps
 * [ ] [vaultwarden](https://github.com/dani-garcia/vaultwarden): Alternative implementation of the Bitwarden server API
 * [ ] Roborocks: Automated home cleaning robot
-* [x] [Watchtower](https://containrrr.dev/watchtower) - A container-based solution for automating Docker container base image updates.
+* [ ] glances
+* [ ] IOT stack: influxdb, grafana
+
 ## Hardware / software stack
 
 * [x] Raspberry Pi 4 Model B 8GB: [OKdo](https://www.okdo.com/p/okdo-raspberry-pi-4-8gb-model-b-starter-kit/)
