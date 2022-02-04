@@ -27,6 +27,11 @@ python_packages:
   - pip
   - pipx
 
+# Install user python packages
+python_user_packages:
+  - docker
+  - docker-compose
+
 # Docker
 docker_users:
   - "{{ user }}"

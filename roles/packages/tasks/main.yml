@@ -9,3 +9,8 @@
   pip:
     name: "{{ python_packages }}"
     state: latest
+
+- name: Install user python packages
+  pip:
+    name: "{{ python_user_packages }}"
+    state: latest
