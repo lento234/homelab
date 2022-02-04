@@ -20,7 +20,7 @@ dry-run:
 
 # Ping all hosts
 ping:
-    ansible all -m ping
+    ansible all --vault-password-file {{ VAULT_PASSWORD_FILE }} -m ping
 
 # Run pre-commit on all files
 pre-commit:
