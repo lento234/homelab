@@ -26,4 +26,4 @@
     # - containers/portainer
     # - containers/watchtower
     - containers/homer
-    # - containers/pihole
+    - containers/pihole
