@@ -1,0 +1,10 @@
+- name: Deploy homer
+  community.docker.docker_container:
+    name: homer
+    image: b4bz/homer:latest
+    ports:
+      - "8080:8080"
+    env: 'GID="{{ gid }}" UID="{{ uid }}"'
+    volumes:
+      - "{{ docker_dir }}/homer/assets:/www/assets"
+    restart_policy: always
