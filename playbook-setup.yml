@@ -2,11 +2,10 @@
   hosts: homelab
 
   roles:
-    # Add default user
-    # - users
-
-    # Configure ssh
-    # - ssh
+    # System setup
+    # - timezone  # Set timezone
+    # - users     # Add default user
+    # - ssh       # Configure ssh
 
     # Update and install basic packages
     # - packages
@@ -16,10 +15,14 @@
     # - role: geerlingguy.docker
     #   become: true
 
+
     # Services
     # - services/dnfautomatic
     # - services/firewalld
 
     # Containers
-    # - containers/portainer
+    - containers/fs
+    - containers/portainer
     - containers/watchtower
+    - containers/homer
+    # - containers/pihole

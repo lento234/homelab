@@ -1,0 +1,13 @@
+- name: Deploy Pi-hole
+  community.docker.docker_container:
+    name: pihole
+    image: pihole/pihole
+    env: '"ServerIP": "{{ ansible_default_ipv4.address }}" "TZ": "{{ timezone }}"'
+    ports:
+      - "53:53/tcp"
+      - "53:53/udp"
+      - "81:80/tcp"
+    volumes:
+      - "{{ docker_dir }}/pihole/pihole:/etc/pihole"
+      - "{{ docker_dir }}/pihole/etc-dnsmasq.d:/etc/dnsmasq.d"
+    restart_policy: always
