@@ -1,0 +1,15 @@
+- name: Check if the persistent data folder exists
+  stat:
+    path: "{{ docker_dir }}"
+  register: persistent_data
+
+- name: Create the persistent data folder for docker containers
+  become: true
+  file:
+    dest: "{{ docker_dir }}"
+    state: directory
+    owner: "{{ user }}"
+    group: "{{ user }}"
+    mode: 0755
+    recurse: true
+  when: not persistent_data.stat.exists
