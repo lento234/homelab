@@ -7,5 +7,5 @@
       - "8000:8000"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-      - portainer_data:/data
+      - "{{ docker_dir }}/portainer:/data"
     restart_policy: always
