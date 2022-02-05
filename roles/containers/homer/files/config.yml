@@ -55,5 +55,10 @@ services:
         logo: "assets/tools/portainer.png"
         subtitle: "Docker Container Management"
         tag: "docker"
-        url: "http://heimdall:9000"
+        url: "http://heimdall.manickathan.ch:9000"
         target: "_blank"
+
+      - name: "Pi-hole"
+        logo: "assets/tools/pi-hole.png"
+        url: "http://heimdall.manickathan.ch:81/admin"
+        type: "PiHole"
