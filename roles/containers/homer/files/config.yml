@@ -40,7 +40,11 @@ colors:
     link-hover: "#BF616A"
 
 # Optional navbar
-links: []
+links:
+  - name: "GitHub Repo"
+    icon: "fab fa-github"
+    url: "https://github.com/lento234/homelab"
+    target: "_blank"
 
 # Services
 services:
