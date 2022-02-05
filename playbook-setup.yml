@@ -2,25 +2,24 @@
   hosts: homelab
 
   roles:
-    # System setup
-    # - timezone  # Set timezone
-    # - users     # Add default user
-    # - ssh       # Configure ssh
+    # System configuration
+    # - system/users        # Add default user
+    # - system/ssh          # Configure ssh
+    # - system/timezone     # Set timezone
 
     # Update and install basic packages
-    # - packages
-    # - upgrade
+    - system/packages       # Install packages
+    - system/upgrade        # Upgrade package
+
+    # Setup dnf autoupdate
+    # - system/dnfautomatic # Install automatic updates
+
+    # Network configuration
+    # - network/firewalld
 
     # # Install docker
     # - role: geerlingguy.docker
     #   become: true
-
-
-    # System configuration
-    - system/dnfautomatic
-
-    # Network configuration
-    - network/firewalld
 
     # Setup containers
     # - containers/fs
