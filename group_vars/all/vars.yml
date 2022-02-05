@@ -6,13 +6,16 @@ gid: 1001
 shell: /bin/zsh
 sudo_group: wheel
 
+# Locale
+timezone: Europe/Zurich
+domain_name: manickathan.ch
+
 # Install packages
 packages:
   - curl
   - git
   - htop
   - neofetch
-  - nginx
   - nmap
   - python3-pip
   - python3-firewall
@@ -36,12 +39,20 @@ python_user_packages:
 docker_users:
   - "{{ user }}"
 
+# Docker volumes
+docker_dir: /opt/data/docker
+
 # Ports (tcp, udp)
 ports:
   - 22/tcp    # ssh
+  - 53/tcp    # dns (pi-hole)
+  - 53/udp    # dns (pi-hole)
+  - 67/udp    # dhcp (pi-hole)
   - 80/tcp    # http
+  - 81/tcp    # http (pi-hole)
   - 443/tcp   # https
   - 8000/tcp  # portainer
+  - 8080/tcp  # homer
   - 9000/tcp  # portainer
 
 # Secrets in vault.yml
