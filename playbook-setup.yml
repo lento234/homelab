@@ -16,13 +16,15 @@
     #   become: true
 
 
-    # Services
-    # - services/dnfautomatic
-    # - services/firewalld
+    # System configuration
+    - system/dnfautomatic
 
-    # Containers
-    - containers/fs
-    - containers/portainer
-    - containers/watchtower
-    - containers/homer
+    # Network configuration
+    - network/firewalld
+
+    # Setup containers
+    # - containers/fs
+    # - containers/portainer
+    # - containers/watchtower
+    # - containers/homer
     # - containers/pihole
