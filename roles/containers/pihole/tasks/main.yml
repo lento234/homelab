@@ -4,6 +4,7 @@
     image: pihole/pihole
     env:
       TZ: "{{ timezone }}"
+      WEBPASSWORD: "pass"
       # ServerIP: "{{ ansible_default_ipv4.address }}"
     ports:
       - "53:53/tcp"
@@ -12,6 +13,7 @@
     volumes:
       - "{{ docker_dir }}/pihole/etc-pihole:/etc/pihole"
       - "{{ docker_dir }}/pihole/etc-dnsmasq.d:/etc/dnsmasq.d"
-    cap_add:
-      - NET_ADMIN
+    privileged: true
+    hostname: "{{ inventory_hostname }}"
+    domainname: "heimdall"
     restart_policy: always
