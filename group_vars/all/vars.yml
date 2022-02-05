@@ -45,14 +45,13 @@ docker_dir: /opt/data/docker
 # Ports (tcp, udp)
 ports:
   - 22/tcp    # ssh
-  - 53/tcp    # dns (pi-hole)
-  - 53/udp    # dns (pi-hole)
-  - 67/udp    # dhcp (pi-hole)
-  - 80/tcp    # http
-  - 81/tcp    # http (pi-hole)
-  - 443/tcp   # https
+  # - 53/tcp    # dns (pi-hole)
+  # - 53/udp    # dns (pi-hole)
+  # - 67/udp    # dhcp (pi-hole)
+  - 80/tcp    # http (homer)
+  # - 81/tcp    # http (pi-hole)
+  - 443/tcp   # https (homer)
   - 8000/tcp  # portainer
-  - 8080/tcp  # homer
   - 9000/tcp  # portainer
 
 # Secrets in vault.yml

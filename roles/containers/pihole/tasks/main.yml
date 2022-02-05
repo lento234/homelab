@@ -2,12 +2,16 @@
   community.docker.docker_container:
     name: pihole
     image: pihole/pihole
-    env: '"ServerIP": "{{ ansible_default_ipv4.address }}" "TZ": "{{ timezone }}"'
+    env:
+      TZ: "{{ timezone }}"
+      # ServerIP: "{{ ansible_default_ipv4.address }}"
     ports:
       - "53:53/tcp"
       - "53:53/udp"
       - "81:80/tcp"
     volumes:
-      - "{{ docker_dir }}/pihole/pihole:/etc/pihole"
+      - "{{ docker_dir }}/pihole/etc-pihole:/etc/pihole"
       - "{{ docker_dir }}/pihole/etc-dnsmasq.d:/etc/dnsmasq.d"
+    cap_add:
+      - NET_ADMIN
     restart_policy: always

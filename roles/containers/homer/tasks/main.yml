@@ -18,6 +18,7 @@
     dest: "{{ docker_dir }}/homer/assets"
     owner: "{{ user }}"
     group: "{{ user }}"
+    mode: "0644"
   with_fileglob:
     - "files/*"
 
@@ -27,6 +28,7 @@
     dest: "{{ docker_dir }}/homer/assets/icons"
     owner: "{{ user }}"
     group: "{{ user }}"
+    mode: "0644"
   with_fileglob:
     - "files/icons/*"
 
@@ -36,5 +38,6 @@
     dest: "{{ docker_dir }}/homer/assets/tools"
     owner: "{{ user }}"
     group: "{{ user }}"
+    mode: "0644"
   with_fileglob:
     - "files/tools/*"
