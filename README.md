@@ -17,7 +17,7 @@
 * [x] [portainer.io](https://www.portainer.io/): A centralized service delivery platform for containerized apps
 * [x] [Watchtower](https://containrrr.dev/watchtower) - A container-based solution for automating Docker container base image updates.
 * [ ] nginx: reverse proxy and load balancer. (or traefix)
-* [ ] [pi-hole](https://github.com/pi-hole/pi-hole): A black hole for internet advertisements
+* [x] [pi-hole](https://github.com/pi-hole/pi-hole): A black hole for internet advertisements
 * [ ] [nextcloud](https://github.com/nextcloud/server): :cloud: cloud Nextcloud server, a safe home for all your data
 * [ ] [photoprism](https://github.com/photoprism/photoprism):  Photos App powered by Go and Google TensorFlow :rainbow: :sparkles:
 * [ ] [plex media server](https://hub.docker.com/r/linuxserver/plex)
