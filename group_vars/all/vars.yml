@@ -1,8 +1,8 @@
 # User settings
 user: lento
 group: "{{ user }}"
-uid: 1001
-gid: 1001
+uid: "1001"
+gid: "1001"
 shell: /bin/zsh
 sudo_group: wheel
 

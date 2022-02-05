@@ -3,7 +3,7 @@
     name: watchtower
     image: containrrr/watchtower
     env:
-      "TZ": "{{ timezone }}"
+      TZ: "{{ timezone }}"
     command: --schedule "0 0 4 * * *"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock

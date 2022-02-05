@@ -3,13 +3,13 @@
 
   roles:
     # System configuration
-    # - system/users        # Add default user
-    # - system/ssh          # Configure ssh
-    # - system/timezone     # Set timezone
+    # - system/users
+    # - system/ssh
+    # - system/timezone
 
     # Update and install basic packages
-    - system/packages       # Install packages
-    - system/upgrade        # Upgrade package
+    # - system/packages
+    # - system/upgrade
 
     # Setup dnf autoupdate
     # - system/dnfautomatic # Install automatic updates
@@ -23,7 +23,7 @@
 
     # Setup containers
     # - containers/fs
-    # - containers/portainer
-    # - containers/watchtower
-    # - containers/homer
+    - containers/portainer
+    - containers/watchtower
+    - containers/homer
     # - containers/pihole

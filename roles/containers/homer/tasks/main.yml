@@ -3,8 +3,11 @@
     name: homer
     image: b4bz/homer:latest
     ports:
-      - "8080:8080"
-    env: 'GID="{{ gid }}" UID="{{ uid }}"'
+      - "80:8080"
+    env:
+      TZ: "{{ timezone }}"
+      GID: "{{ gid }}"
+      UID: "{{ uid }}"
     volumes:
       - "{{ docker_dir }}/homer/assets:/www/assets"
     restart_policy: always
