@@ -11,15 +11,13 @@
 
 </div>
 
-## Setup
+## Hosted services
 
-### Hosted services
-
-* [ ] [homer](https://github.com/bastienwirtz/homer): A very simple static homepage for your server.
-* [ ] nginx: Reverse
-* [ ] [pi-hole](https://github.com/pi-hole/pi-hole): A black hole for internet advertisements
+* [x] [homer](https://github.com/bastienwirtz/homer): A very simple static homepage for your server.
 * [x] [portainer.io](https://www.portainer.io/): A centralized service delivery platform for containerized apps
 * [x] [Watchtower](https://containrrr.dev/watchtower) - A container-based solution for automating Docker container base image updates.
+* [ ] nginx: reverse proxy and load balancer. (or traefix)
+* [ ] [pi-hole](https://github.com/pi-hole/pi-hole): A black hole for internet advertisements
 * [ ] [nextcloud](https://github.com/nextcloud/server): :cloud: cloud Nextcloud server, a safe home for all your data
 * [ ] [photoprism](https://github.com/photoprism/photoprism):  Photos App powered by Go and Google TensorFlow :rainbow: :sparkles:
 * [ ] [plex media server](https://hub.docker.com/r/linuxserver/plex)
@@ -36,6 +34,25 @@
 * [x] Boot: Sandisk microSDXC 128GB
 * [x] OS: Rocky Linux 8.5 [wiki](https://wiki.rockylinux.org/en/special-interest-groups/alt-arch/raspberry-pi)
 * [ ] Storage (*planned*)
+
+
+## Setup
+
+```
+$ just
+
+Available recipes:
+    create     # Create/start a local development server
+    destroy    # Destroy the local development server
+    dry-run    # Dry-run default playbook
+    help       # display help information
+    login      # Login into the local development server
+    ping       # Ping all hosts
+    pre-commit # Run pre-commit on all files
+    run        # Run default playbook
+    test       # Test inside the local development server
+    vault      # Edit the secret vault file
+```
 
 
 ## References
