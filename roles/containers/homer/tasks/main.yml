@@ -11,3 +11,30 @@
     volumes:
       - "{{ docker_dir }}/homer/assets:/www/assets"
     restart_policy: always
+
+- name: Copy config files to homer
+  copy:
+    src: "{{ item }}"
+    dest: "{{ docker_dir }}/homer/assets"
+    owner: "{{ user }}"
+    group: "{{ user }}"
+  with_fileglob:
+    - "files/*"
+
+- name: Copy icon files to homer
+  copy:
+    src: "{{ item }}"
+    dest: "{{ docker_dir }}/homer/assets/icons"
+    owner: "{{ user }}"
+    group: "{{ user }}"
+  with_fileglob:
+    - "files/icons/*"
+
+- name: Copy service logo files to homer
+  copy:
+    src: "{{ item }}"
+    dest: "{{ docker_dir }}/homer/assets/tools"
+    owner: "{{ user }}"
+    group: "{{ user }}"
+  with_fileglob:
+    - "files/tools/*"

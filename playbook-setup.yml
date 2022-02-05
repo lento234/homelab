@@ -23,7 +23,7 @@
 
     # Setup containers
     # - containers/fs
-    - containers/portainer
-    - containers/watchtower
+    # - containers/portainer
+    # - containers/watchtower
     - containers/homer
     # - containers/pihole
