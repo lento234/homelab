@@ -13,20 +13,27 @@
 
 ## Hosted services
 
+### Server management
+
 * [x] [homer](https://github.com/bastienwirtz/homer): A very simple static homepage for your server.
-* [x] [portainer.io](https://www.portainer.io/): A centralized service delivery platform for containerized apps
+* [x] [portainer.io](https://docs.portainer.io/v/ce-2.11/) - A centralized service delivery platform for containerized apps
 * [x] [Watchtower](https://containrrr.dev/watchtower) - A container-based solution for automating Docker container base image updates.
-* [ ] nginx: reverse proxy and load balancer. (or traefix)
-* [x] [pi-hole](https://github.com/pi-hole/pi-hole): A black hole for internet advertisements
-* [ ] [nextcloud](https://github.com/nextcloud/server): :cloud: cloud Nextcloud server, a safe home for all your data
-* [ ] [photoprism](https://github.com/photoprism/photoprism):  Photos App powered by Go and Google TensorFlow :rainbow: :sparkles:
-* [ ] [plex media server](https://hub.docker.com/r/linuxserver/plex)
-* [ ] [home assistant](https://github.com/khuedoan/homelab): My self-hosting infrastructure, fully automated from empty disk to operating services
-* [ ] [Netdata](https://www.netdata.cloud/): Monitor everything in real time.
-* [ ] [vaultwarden](https://github.com/dani-garcia/vaultwarden): Alternative implementation of the Bitwarden server API
-* [ ] Roborocks: Automated home cleaning robot
+* [x] [nginx proxy manager](https://nginxproxymanager.com/guide/) - Nginx reverse proxy manager with dashboard.
+* [x] [pi-hole](https://pi-hole.net/) - A black hole for internet advertisements
+* [ ] [Netdata](https://www.netdata.cloud/) - Monitor everything in real time.
 * [ ] glances
+## Media /
+
+* [ ] [nextcloud](https://github.com/nextcloud/server) - :cloud: cloud Nextcloud server, a safe home for all your data
+* [ ] [photoprism](https://github.com/photoprism/photoprism) - Photos App powered by Go and Google TensorFlow :rainbow: :sparkles:
+* [ ] [plex media server](https://hub.docker.com/r/linuxserver/plex)
+* [ ] [vaultwarden](https://github.com/dani-garcia/vaultwarden) - Alternative implementation of the Bitwarden server
+## Home automation
+
+* [ ] [home assistant](https://github.com/khuedoan/homelab): My self-hosting infrastructure, fully automated from empty disk to operating services
 * [ ] IOT stack: influxdb, grafana
+* [ ] Roborocks: Automated home cleaning robot
+
 
 ## Hardware / software stack
 
