@@ -54,7 +54,7 @@ services:
       - name: "Portainer"
         logo: "assets/tools/portainer.png"
         subtitle: "Docker Container Management"
-        tag: "docker"
+        # tag: "docker"
         url: "http://heimdall.manickathan.ch:9000"
         target: "_blank"
 
@@ -62,3 +62,8 @@ services:
         logo: "assets/tools/pi-hole.png"
         url: "http://heimdall.manickathan.ch:81/admin"
         type: "PiHole"
+
+      - name: "Nginx Proxy Manager"
+        logo: "assets/tools/nginx-proxy-manager.png"
+        url: "http://heimdall.manickathan.ch:8888"
+        target: "_blank"

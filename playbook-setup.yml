@@ -8,8 +8,8 @@
     # - system/timezone
 
     # Update and install basic packages
-    # - system/packages
-    # - system/upgrade
+    - system/packages
+    - system/upgrade
 
     # Setup dnf autoupdate
     # - system/dnfautomatic # Install automatic updates
@@ -22,9 +22,9 @@
     #   become: true
 
     # Setup containers
-    # - containers/fs
-    # - containers/portainer
-    # - containers/watchtower
+    - containers/fs
+    - containers/portainer
+    - containers/watchtower
     - containers/nginx
-    # - containers/homer
-    # - containers/pihole
+    - containers/pihole
+    - containers/homer
