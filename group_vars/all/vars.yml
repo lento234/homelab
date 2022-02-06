@@ -53,7 +53,7 @@ ports:
   - 443/tcp   # https
   - 8000/tcp  # portainer
   - 8080/tcp  # homer dashboard
-  - 8888/tcp  # nginx / traefix dashboard
+  - 8888/tcp  # nginx dashboard
   - 9000/tcp  # portainer dashboard
 
 # Secrets in vault.yml

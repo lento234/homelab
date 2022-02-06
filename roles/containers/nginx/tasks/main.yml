@@ -1,0 +1,12 @@
+- name: Deploy nginx proxy manager
+  community.docker.docker_container:
+    name: nginx
+    image: jc21/nginx-proxy-manager
+    ports:
+      - "80:80"
+      - "443:443"
+      - "8888:81"
+    volumes:
+      - "{{ docker_dir }}/nginx/data:/data"
+      - /var/run/docker.sock:/var/run/docker.sock
+    restart_policy: always
