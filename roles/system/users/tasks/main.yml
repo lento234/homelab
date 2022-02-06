@@ -2,7 +2,7 @@
   become: true
   group:
     name: "{{ group }}"
-    gid: "{{ guid }}"
+    gid: "{{ gid }}"
     state: present
 
 - name: Add user {{ user }}
