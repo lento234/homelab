@@ -3,7 +3,7 @@
     name: homer
     image: b4bz/homer:latest
     ports:
-      - "80:8080"
+      - "8080:8080"
     env:
       TZ: "{{ timezone }}"
       GID: "{{ gid }}"
