@@ -24,9 +24,9 @@
 * [ ] glances
 ### Media / storage
 
+* [ ] [plex media server](https://hub.docker.com/r/linuxserver/plex)
 * [ ] [nextcloud](https://github.com/nextcloud/server) - :cloud: cloud Nextcloud server, a safe home for all your data
 * [ ] [photoprism](https://github.com/photoprism/photoprism) - Photos App powered by Go and Google TensorFlow :rainbow: :sparkles:
-* [ ] [plex media server](https://hub.docker.com/r/linuxserver/plex)
 * [ ] [vaultwarden](https://github.com/dani-garcia/vaultwarden) - Alternative implementation of the Bitwarden server
 ## Home automation
 

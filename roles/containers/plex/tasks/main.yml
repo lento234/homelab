@@ -1,0 +1,51 @@
+- name: Check if the tv data folder exists
+  stat:
+    path: "{{ tv_dir }}"
+  register: persistent_tv_data
+
+
+- name: Create the persistent tv data folder
+  become: true
+  file:
+    dest: "{{ tv_dir }}"
+    state: directory
+    owner: "{{ user }}"
+    group: "{{ user }}"
+    mode: 0755
+    recurse: true
+  when: not persistent_tv_data.stat.exists
+
+
+- name: Check if the movie data folder exists
+  stat:
+    path: "{{ movies_dir }}"
+  register: persistent_movie_data
+
+
+- name: Create the persistent movies data folder
+  become: true
+  file:
+    dest: "{{ movies_dir }}"
+    state: directory
+    owner: "{{ user }}"
+    group: "{{ user }}"
+    mode: 0755
+    recurse: true
+  when: not persistent_movie_data.stat.exists
+
+
+- name: Deploy plex media server
+  community.docker.docker_container:
+    name: plex
+    image: ghcr.io/linuxserver/plex:latest
+    network_mode: "host"
+    env:
+      PUID: "{{ uid }}"
+      PGID: "{{ gid }}"
+      TZ: "{{ timezone }}"
+      VERSION: docker
+    volumes:
+      - "{{ docker_dir }}/plex/library:/config"
+      - "{{ tv_dir }}:/tv"
+      - "{{ movies_dir }}:/movies"
+    restart_policy: always
