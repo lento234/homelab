@@ -13,31 +13,29 @@
     restart_policy: always
 
 - name: Copy config files to homer
-  copy:
-    src: "{{ item }}"
-    dest: "{{ docker_dir }}/homer/assets"
+  template:
+    src: config.yml.j2
+    dest: "{{ docker_dir }}/homer/assets/config.yml"
     owner: "{{ user }}"
-    group: "{{ user }}"
+    group: "{{ group }}"
     mode: "0644"
-  with_fileglob:
-    - "files/*"
 
-- name: Copy icon files to homer
-  copy:
-    src: "{{ item }}"
-    dest: "{{ docker_dir }}/homer/assets/icons"
-    owner: "{{ user }}"
-    group: "{{ user }}"
-    mode: "0644"
-  with_fileglob:
-    - "files/icons/*"
-
-- name: Copy service logo files to homer
+- name: Copy logos to homer
   copy:
     src: "{{ item }}"
     dest: "{{ docker_dir }}/homer/assets/tools"
     owner: "{{ user }}"
-    group: "{{ user }}"
+    group: "{{ group }}"
     mode: "0644"
   with_fileglob:
     - "files/tools/*"
+
+- name: Copy icons to homer
+  copy:
+    src: "{{ item }}"
+    dest: "{{ docker_dir }}/homer/assets/icons"
+    owner: "{{ user }}"
+    group: "{{ group }}"
+    mode: "0644"
+  with_fileglob:
+    - "files/icons/*"
