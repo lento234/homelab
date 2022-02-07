@@ -19,14 +19,14 @@
 * [x] [portainer.io](https://docs.portainer.io/v/ce-2.11/) - A centralized service delivery platform for containerized apps
 * [x] [Watchtower](https://containrrr.dev/watchtower) - A container-based solution for automating Docker container base image updates.
 * [x] [nginx proxy manager](https://nginxproxymanager.com/guide/) - Nginx reverse proxy manager with dashboard.
-* [x] [pi-hole](https://pi-hole.net/) - A black hole for internet advertisements
+* [x] [pi-hole](https://pi-hole.net/) - A black hole for internet advertisements.
 * [ ] [Netdata](https://www.netdata.cloud/) - Monitor everything in real time.
 * [ ] glances
 ### Media / storage
 
+* [x] [plex media server](https://hub.docker.com/r/linuxserver/plex) - Organizes video, music and photos from personal media libraries.
 * [ ] [nextcloud](https://github.com/nextcloud/server) - :cloud: cloud Nextcloud server, a safe home for all your data
 * [ ] [photoprism](https://github.com/photoprism/photoprism) - Photos App powered by Go and Google TensorFlow :rainbow: :sparkles:
-* [ ] [plex media server](https://hub.docker.com/r/linuxserver/plex)
 * [ ] [vaultwarden](https://github.com/dani-garcia/vaultwarden) - Alternative implementation of the Bitwarden server
 ## Home automation
 
