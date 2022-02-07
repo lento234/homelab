@@ -15,7 +15,7 @@
 
 ### Server management
 
-* [x] [homer](https://github.com/bastienwirtz/homer): A very simple static homepage for your server.
+* [x] [homer](https://github.com/bastienwirtz/homer) - A very simple static homepage for your server.
 * [x] [portainer.io](https://docs.portainer.io/v/ce-2.11/) - A centralized service delivery platform for containerized apps
 * [x] [Watchtower](https://containrrr.dev/watchtower) - A container-based solution for automating Docker container base image updates.
 * [x] [nginx proxy manager](https://nginxproxymanager.com/guide/) - Nginx reverse proxy manager with dashboard.
