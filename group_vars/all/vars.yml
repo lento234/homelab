@@ -58,6 +58,7 @@ ports:
   - 1900/udp  # Plex DLNA Server
   - 5353/udp  # bonjour / avahi network discovery
   - 8000/tcp  # portainer
+  - 8008/tcp  # nextcloud dashboard
   - 8080/tcp  # homer dashboard
   - 8324/tcp  # plex for roku (optional)
   - 8888/tcp  # nginx dashboard

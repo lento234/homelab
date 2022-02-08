@@ -1,0 +1,13 @@
+- name: Deploy Nextcloud
+  community.docker.docker_container:
+    name: nextcloud
+    image: nextcloud  # lscr.io/linuxserver/nextcloud
+    env:
+      PUID: "{{ uid }}"
+      PGID: "{{ gid }}"
+    ports:
+      - "8008:80/tcp"
+    volumes:
+      - "{{ docker_dir }}/nextcloud/appdata:/config"
+      - "{{ docker_dir }}/nextcloud/data:/data"
+    restart_policy: always

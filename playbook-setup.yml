@@ -8,14 +8,14 @@
     # - system/timezone
 
     # Update and install basic packages
-    - system/packages
-    - system/upgrade
+    # - system/packages
+    # - system/upgrade
 
     # Setup dnf autoupdate
     # - system/dnfautomatic # Install automatic updates
 
     # Network configuration
-    # - network/firewalld
+    - network/firewalld
 
     # # Install docker
     # - role: geerlingguy.docker
@@ -29,3 +29,4 @@
     # - containers/nginx
     # - containers/homer
     # - containers/plex
+    - containers/nextcloud
