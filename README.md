@@ -11,6 +11,12 @@
 
 </div>
 
+## Description
+
+The project contains a set of ansible playbooks use to setup (and manage) a personal homelab infrastructure. The homelab runs on a Raspberry Pi 4 running on Rocky Linux.
+
+![Homepage](assets/homepage.png)
+
 ## Hosted services
 
 ### Server management
