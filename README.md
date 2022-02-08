@@ -13,7 +13,7 @@
 
 ## Description
 
-The project contains a set of ansible playbooks use to setup (and manage) a personal homelab infrastructure. The homelab runs on a Raspberry Pi 4 running on Rocky Linux.
+The project contains a set of ansible playbooks use to setup (and manage) a personal homelab infrastructure. The homelab runs on a Raspberry Pi 4 running on Rocky Linux. Currently using `nord` [theme](https://www.nordtheme.com/).
 
 ![Homepage](assets/homepage.png)
 
