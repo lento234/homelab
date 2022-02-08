@@ -25,7 +25,7 @@
     # - containers/fs
     # - containers/portainer
     # - containers/watchtower
+    - containers/pihole
     # - containers/nginx
-    # - containers/pihole
-    - containers/homer
-    - containers/plex
+    # - containers/homer
+    # - containers/plex
