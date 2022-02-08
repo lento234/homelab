@@ -27,5 +27,5 @@
     # - containers/watchtower
     - containers/pihole
     # - containers/nginx
-    # - containers/homer
+    - containers/homer
     # - containers/plex
