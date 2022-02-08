@@ -34,7 +34,7 @@ The project contains a set of ansible playbooks use to setup (and manage) a pers
 * [ ] [nextcloud](https://github.com/nextcloud/server) - :cloud: cloud Nextcloud server, a safe home for all your data
 * [ ] [photoprism](https://github.com/photoprism/photoprism) - Photos App powered by Go and Google TensorFlow :rainbow: :sparkles:
 * [ ] [vaultwarden](https://github.com/dani-garcia/vaultwarden) - Alternative implementation of the Bitwarden server
-## Home automation
+### Home automation
 
 * [ ] [home assistant](https://github.com/khuedoan/homelab): My self-hosting infrastructure, fully automated from empty disk to operating services
 * [ ] IOT stack: influxdb, grafana
@@ -51,6 +51,8 @@ The project contains a set of ansible playbooks use to setup (and manage) a pers
 
 ## Setup
 
+1. Use the `just` command runner to setup the homelab:
+
 ```
 $ just
 
@@ -66,6 +68,17 @@ Available recipes:
     test       # Test inside the local development server
     vault      # Edit the secret vault file
 ```
+
+2. Add hosts into the `hosts.ini` file (example):
+
+```
+[homelab]
+heimdall ansible_python_interpreter=/usr/libexec/platform-python
+```
+
+3. Modify group vars file `group_vars/all/vars.yml`
+
+4. Run `just dry-run` or `just run` to deploy the infrastructure.
 
 
 ## References
