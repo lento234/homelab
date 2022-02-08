@@ -10,3 +10,18 @@
       - "{{ docker_dir }}/nginx/data:/data"
       - /var/run/docker.sock:/var/run/docker.sock
     restart_policy: always
+
+- name: Create the persistent custom folder for nginx
+  become: true
+  file:
+    dest: "{{ docker_dir }}/nginx/data/nginx/custom"
+    state: directory
+    mode: 0755
+
+- name: Copy custom proxy configuration to nginx
+  become: true
+  template:
+    src: http.conf.j2
+    dest: "{{ docker_dir }}/nginx/data/nginx/custom/http.conf"
+    mode: "0644"
+  notify: Restart nginx

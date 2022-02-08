@@ -1,0 +1,64 @@
+server {
+    set $forward_scheme http;
+    set $server         "{{ ansible_hostname }}.{{ domain_name }}";
+    set $port           81;
+    listen 80;
+    listen [::]:80;
+    server_name pihole.{{ domain_name }};
+
+    location / {
+        include conf.d/include/proxy.conf;
+    }
+}
+
+server {
+    set $forward_scheme http;
+    set $server         "{{ ansible_hostname }}.{{ domain_name }}";
+    set $port           32400;
+    listen 80;
+    listen [::]:80;
+    server_name plex.{{ domain_name }};
+
+    location / {
+        include conf.d/include/proxy.conf;
+    }
+}
+
+server {
+    set $forward_scheme http;
+    set $server         "{{ ansible_hostname }}.{{ domain_name }}";
+    set $port           9000;
+    listen 80;
+    listen [::]:80;
+    server_name portainer.{{ domain_name }};
+
+    location / {
+        include conf.d/include/proxy.conf;
+    }
+}
+
+server {
+    set $forward_scheme http;
+    set $server         "{{ ansible_hostname }}.{{ domain_name }}";
+    set $port           8888;
+    listen 80;
+    listen [::]:80;
+    server_name nginx.{{ domain_name }};
+
+    location / {
+        include conf.d/include/proxy.conf;
+    }
+}
+
+server {
+    set $forward_scheme http;
+    set $server         "{{ ansible_hostname }}.{{ domain_name }}";
+    set $port           8080;
+    listen 80;
+    listen [::]:80;
+    server_name heimdall.{{ domain_name }};
+
+    location / {
+        include conf.d/include/proxy.conf;
+    }
+}
