@@ -65,6 +65,12 @@ services:
         url: "http://portainer.{{ domain_name }}" # url: "http://heimdall.manickathan.ch:9000"
         target: "_blank"
 
+      - name: "Netdata"
+        logo: "assets/tools/netdata.png"
+        subtitle: "System Monitoring"
+        url: "http://netdata.{{ domain_name }}"
+        target: "_blank"
+
       - name: "Pi-hole"
         logo: "assets/tools/pi-hole.png"
         url: "http://heimdall.{{ domain_name }}:81/admin"

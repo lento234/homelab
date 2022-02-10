@@ -1,0 +1,22 @@
+- name: Deploy netdata
+  community.docker.docker_container:
+    name: netdata
+    image: netdata/netdata
+    hostname: "{{ ansible_hostname }}.{{ domain_name }}"
+    state: started
+    pull: true
+    ports:
+      - "19999:19999"
+    volumes:
+      - "{{ docker_dir }}/netdata/netdataconfig:/netdataconfig"
+      - "/etc/passwd:/host/etc/passwd:ro"
+      - "/etc/group:/host/etc/group:ro"
+      - "/proc:/host/proc:ro"
+      - "/sys:/host/sys:ro"
+      - "/etc/os-release:/host/etc/os-release:ro"
+      - "/var/run/docker.sock:/var/run/docker.sock:ro"
+    capabilities:
+      - SYS_PTRACE
+    security_opts:
+      - apparmor:unconfined
+    restart_policy: unless-stopped
