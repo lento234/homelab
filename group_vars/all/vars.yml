@@ -63,6 +63,17 @@ ports:
   - 32410/udp   # current GDM network discovery
   - 32469/tcp   # Plex DLNA Server
 
+services:
+  - dns
+  - ftp
+  - grafana
+  - http
+  - https
+  - plex
+  - rsyncd
+  - ssh
+  - transmission-client
+
 #### Secrets in vault.yml (add to vault.yml)
 
 # password: ""
