@@ -60,6 +60,7 @@ ports:
   - 8324/tcp  # plex for roku (optional)
   - 8888/tcp  # nginx dashboard
   - 9000/tcp  # portainer dashboard
+  - 19999/tcp   # netdata dashboard
   - 32400/tcp   # Plex Media Server
   - 32410/udp   # current GDM network discovery
   - 32469/tcp   # Plex DLNA Server

@@ -62,3 +62,16 @@ server {
         include conf.d/include/proxy.conf;
     }
 }
+
+server {
+    set $forward_scheme http;
+    set $server         "{{ ansible_hostname }}.{{ domain_name }}";
+    set $port           19999;
+    listen 80;
+    listen [::]:80;
+    server_name netdata.{{ domain_name }};
+
+    location / {
+        include conf.d/include/proxy.conf;
+    }
+}
