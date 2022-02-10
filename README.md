@@ -26,8 +26,8 @@ The project contains a set of ansible playbooks use to setup (and manage) a pers
 * [x] [Watchtower](https://containrrr.dev/watchtower) - A container-based solution for automating Docker container base image updates.
 * [x] [nginx proxy manager](https://nginxproxymanager.com/guide/) - Nginx reverse proxy manager with dashboard.
 * [x] [pi-hole](https://pi-hole.net/) - A black hole for internet advertisements.
-* [ ] [Netdata](https://www.netdata.cloud/) - Monitor everything in real time.
-* [ ] glances
+* [x] [Netdata](https://www.netdata.cloud/) - Monitor everything in real time.
+
 ### Media / storage
 
 * [x] [plex media server](https://hub.docker.com/r/linuxserver/plex) - Organizes video, music and photos from personal media libraries.

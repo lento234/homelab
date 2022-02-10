@@ -1,10 +1,3 @@
-- name: Copy custom local DNS domains to pihole
-  become: true
-  template:
-    src: custom.list.j2
-    dest: "{{ docker_dir }}/pihole/etc-pihole/custom.list"
-    mode: "0644"
-
 - name: Deploy Pi-hole
   community.docker.docker_container:
     name: pihole
@@ -24,3 +17,11 @@
     hostname: "{{ inventory_hostname }}"
     domainname: "heimdall"
     restart_policy: always
+
+- name: Copy custom local DNS domains to pihole
+  become: true
+  template:
+    src: custom.list.j2
+    dest: "{{ docker_dir }}/pihole/etc-pihole/custom.list"
+    mode: "0644"
+  notify: Restart pihole
