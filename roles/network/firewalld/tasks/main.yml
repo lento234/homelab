@@ -18,3 +18,14 @@
     - "{{ ports }}"
     - "{{ ssh_port }}/tcp"
   notify: Restart firewalld
+
+- name: Configure services in firewalld
+  become: true
+  ansible.posix.firewalld:
+    state: enabled
+    service: "{{ item }}"
+    permanent: true
+    immediate: true
+  with_items:
+    - "{{ services }}"
+  notify: Restart firewalld
