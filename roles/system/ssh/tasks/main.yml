@@ -11,4 +11,6 @@
       line: "PermitRootLogin no"
     - regexp: "^#?PasswordAuthentication"
       line: "PasswordAuthentication yes"
+    - regexp: "^#?Port"
+      line: "Port {{ ssh_port }}"
   notify: Restart sshd

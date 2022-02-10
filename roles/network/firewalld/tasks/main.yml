@@ -16,4 +16,5 @@
     immediate: true
   with_items:
     - "{{ ports }}"
+    - "{{ ssh_port }}/tcp"
   notify: Restart firewalld

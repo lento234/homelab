@@ -1,6 +1,4 @@
 # User settings
-user: lento
-group: "{{ user }}"
 uid: "1001"
 gid: "1001"
 shell: /bin/zsh
@@ -48,7 +46,7 @@ movies_dir: "{{ storage_dir }}/media/movies"
 
 # Ports (tcp, udp)
 ports:
-  - 22/tcp    # ssh
+  # - 22/tcp    # ssh (disabled)
   - 53/tcp    # dns (pi-hole)
   - 53/udp    # dns (pi-hole)
   - 80/tcp    # http
@@ -67,4 +65,6 @@ ports:
 
 #### Secrets in vault.yml (add to vault.yml)
 
-# password: ''
+# password: ""
+# user: ""
+# group: "{{ user }}"
