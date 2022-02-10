@@ -3,8 +3,8 @@
 
   roles:
     # System configuration
-    # - system/users
-    - system/ssh
+    # - system/init
+    # - system/ssh
     # - system/timezone
 
     # Update and install basic packages
@@ -15,9 +15,9 @@
     # - system/dnfautomatic # Install automatic updates
 
     # Network configuration
-    - network/firewalld
+    # - network/firewalld
 
-    # # Install docker
+    # Install docker
     # - role: geerlingguy.docker
     #   become: true
 

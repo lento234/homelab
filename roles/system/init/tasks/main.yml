@@ -1,3 +1,16 @@
+- name: Setup basic dnf packages and config
+  become: true
+  dnf:
+    update_cache: true
+    name:
+      - e2fsprogs
+      - epel-release
+      - git
+      - zsh
+    enablerepo:
+      - epel
+    state: latest
+
 - name: Add group {{ group }}
   become: true
   group:
