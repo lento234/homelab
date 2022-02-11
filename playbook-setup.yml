@@ -22,14 +22,17 @@
     #   become: true
 
     # Setup containers
+
     # Filesystem
     # - containers/fs
+
     # System
     # - containers/portainer
     # - containers/watchtower
     # - containers/pihole
     # - containers/nginx
     # - containers/homer
+    # - containers/netdata
 
     # Media / Storage
     # - containers/plex
