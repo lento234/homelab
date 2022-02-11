@@ -8,8 +8,8 @@
     # - system/timezone
 
     # Update and install basic packages
-    - system/packages
-    - system/upgrade
+    # - system/packages
+    # - system/upgrade
 
     # Setup dnf autoupdate
     # - system/dnfautomatic # Install automatic updates
