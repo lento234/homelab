@@ -55,9 +55,25 @@ services:
         logo: "assets/tools/plex.png"
         url: "http://plex.{{ domain_name }}"
         target: "_blank"
+
       - name: "Nextcloud"
         logo: "assets/tools/nextcloud.png"
         url: "http://nextcloud.{{ domain_name }}"
+        target: "_blank"
+
+  - name: "Monitoring"
+    icon: "fas fa-desktop"
+    items:
+      - name: "Glances"
+        logo: "assets/tools/glances.png"
+        subtitle: "Monitoring tool"
+        url: "http://glances.{{ domain_name }}"
+        target: "_blank"
+
+      - name: "Netdata"
+        logo: "assets/tools/netdata.png"
+        subtitle: "System Monitoring"
+        url: "http://netdata.{{ domain_name }}"
         target: "_blank"
 
   - name: "Server"
@@ -67,12 +83,6 @@ services:
         logo: "assets/tools/portainer.png"
         subtitle: "Docker Container Management"
         url: "http://portainer.{{ domain_name }}"
-        target: "_blank"
-
-      - name: "Netdata"
-        logo: "assets/tools/netdata.png"
-        subtitle: "System Monitoring"
-        url: "http://netdata.{{ domain_name }}"
         target: "_blank"
 
       - name: "Pi-hole"
