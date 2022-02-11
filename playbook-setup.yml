@@ -22,8 +22,10 @@
     #   become: true
 
     # Setup containers
+
     # Filesystem
     # - containers/fs
+
     # System
     # - containers/portainer
     # - containers/watchtower
@@ -34,3 +36,4 @@
 
     # Media / Storage
     # - containers/plex
+    - containers/nextcloud
