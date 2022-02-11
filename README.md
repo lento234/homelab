@@ -26,7 +26,11 @@ The project contains a set of ansible playbooks use to setup (and manage) a pers
 * [x] [Watchtower](https://containrrr.dev/watchtower) - A container-based solution for automating Docker container base image updates.
 * [x] [nginx proxy manager](https://nginxproxymanager.com/guide/) - Nginx reverse proxy manager with dashboard.
 * [x] [pi-hole](https://pi-hole.net/) - A black hole for internet advertisements.
+
+## Montoring
+
 * [x] [Netdata](https://www.netdata.cloud/) - Monitor everything in real time.
+* [x] [Glances](https://nicolargo.github.io/glances) - An *Eye* on your system.
 
 ### Media / storage
 
@@ -35,13 +39,13 @@ The project contains a set of ansible playbooks use to setup (and manage) a pers
 * [ ] [photoprism](https://github.com/photoprism/photoprism) - Photos App powered by Go and Google TensorFlow :rainbow: :sparkles:
 * [ ] [vaultwarden](https://github.com/dani-garcia/vaultwarden) - Alternative implementation of the Bitwarden server
 * [ ] [paperless-ng](https://github.com/jonaswinkler/paperless-ng) - A supercharged version of paperless: scan, index and archive all your physical documents
+
 ### Home automation
 
 * [ ] [home assistant](https://github.com/khuedoan/homelab) - My self-hosting infrastructure, fully automated from empty disk to operating services
 * [ ] [grocy](https://github.com/linuxserver/docker-grocy) - Grocy is a web-based self-hosted groceries & household management solution for your home.
 * [ ] IOT stack: influxdb, grafana
 * [ ] Roborocks: Automated home cleaning robot
-
 
 ## Hardware / software stack
 

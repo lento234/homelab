@@ -64,6 +64,8 @@ ports:
   - 32400/tcp   # Plex Media Server
   - 32410/udp   # current GDM network discovery
   - 32469/tcp   # Plex DLNA Server
+  - 61208/tcp   # glances
+  - 61209/tcp   # glances
 
 services:
   - dns
