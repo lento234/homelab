@@ -29,6 +29,7 @@
       MYSQL_DATABASE: "nextcloud"
       MYSQL_USER: "nextcloud"
       MYSQL_HOST: "nextcloud-mariadb"
+      NEXTCLOUD_TRUSTED_DOMAINS: "nextcloud.{{ domain_name }}"
     volumes:
       - "{{ docker_dir }}/nextcloud/nextcloud:/var/www/html"
     ports:
