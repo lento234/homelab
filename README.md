@@ -27,7 +27,7 @@ The project contains a set of ansible playbooks use to setup (and manage) a pers
 * [x] [nginx proxy manager](https://nginxproxymanager.com/guide/) - Nginx reverse proxy manager with dashboard.
 * [x] [pi-hole](https://pi-hole.net/) - A black hole for internet advertisements.
 
-## Montoring
+## Monitoring
 
 * [x] [Netdata](https://www.netdata.cloud/) - Monitor everything in real time.
 * [x] [Glances](https://nicolargo.github.io/glances) - An *Eye* on your system.
