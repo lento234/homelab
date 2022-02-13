@@ -15,7 +15,10 @@
     # - system/dnfautomatic # Install automatic updates
 
     # Network configuration
-    # - network/firewalld
+    - network/firewalld
+
+    # Network filesystem
+    - system/nfs
 
     # Install docker
     # - role: geerlingguy.docker
@@ -31,7 +34,7 @@
     # - containers/watchtower
     # - containers/pihole
     # - containers/nginx
-    - containers/homer
+    # - containers/homer
 
     # Monitoring
     # - containers/netdata
