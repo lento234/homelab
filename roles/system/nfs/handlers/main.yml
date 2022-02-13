@@ -1,0 +1,9 @@
+- name: Restart nfs
+  become: true
+  service:
+    name: "{{ item }}"
+    enabled: true
+    state: restarted
+  with_items:
+    - nfs-server
+    - rpcbind
