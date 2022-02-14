@@ -36,6 +36,7 @@ The project contains a set of ansible playbooks use to setup (and manage) a pers
 
 * [x] [plex media server](https://hub.docker.com/r/linuxserver/plex) - Organizes video, music and photos from personal media libraries.
 * [x] [nextcloud](https://github.com/nextcloud/server) - :cloud: cloud Nextcloud server, a safe home for all your data
+* [x] NFS - A network filesystem using the NFS protocol.
 * [ ] [photoprism](https://github.com/photoprism/photoprism) - Photos App powered by Go and Google TensorFlow :rainbow: :sparkles:
 * [ ] [vaultwarden](https://github.com/dani-garcia/vaultwarden) - Alternative implementation of the Bitwarden server
 * [ ] [paperless-ng](https://github.com/jonaswinkler/paperless-ng) - A supercharged version of paperless: scan, index and archive all your physical documents
