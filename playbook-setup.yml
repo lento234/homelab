@@ -18,7 +18,7 @@
     # - network/firewalld
 
     # Network filesystem
-    - system/nfs
+    # - system/nfs
 
     # Install docker
     # - role: geerlingguy.docker
@@ -34,7 +34,7 @@
     # - containers/watchtower
     # - containers/pihole
     # - containers/nginx
-    # - containers/homer
+    - containers/homer
 
     # Monitoring
     # - containers/netdata
@@ -43,3 +43,4 @@
     # Media / Storage
     # - containers/plex
     # - containers/nextcloud
+    # - containers/photoprism
