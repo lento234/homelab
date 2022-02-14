@@ -4,6 +4,7 @@
     image: containrrr/watchtower
     env:
       TZ: "{{ timezone }}"
+      WATCHTOWER_CLEANUP: "true"
     command: --schedule "0 0 4 * * *"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
