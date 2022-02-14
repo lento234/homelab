@@ -34,7 +34,7 @@
     # - containers/watchtower
     # - containers/pihole
     # - containers/nginx
-    - containers/homer
+    # - containers/homer
 
     # Monitoring
     # - containers/netdata
@@ -44,3 +44,6 @@
     # - containers/plex
     # - containers/nextcloud
     # - containers/photoprism
+
+    # Home automation
+    - containers/homeassistant

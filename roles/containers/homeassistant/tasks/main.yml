@@ -1,0 +1,24 @@
+- name: Deploy homeassistant
+  docker_container:
+    name: homeassistant
+    image: "ghcr.io/home-assistant/home-assistant:stable"
+    env:
+      TZ: "{{ timezone }}"
+    volumes:
+      - "{{ docker_dir }}/homeassistant/config:/config"
+      - "/etc/localtime:/etc/localtime:ro"
+    privileged: true
+    network_mode: "host"
+    restart_policy: unless-stopped
+
+- name: Add trusted proxies
+  become: true
+  lineinfile:
+    path: "{{ docker_dir }}/homeassistant/config/configuration.yaml"
+    insertafter: "http:"
+    line: |
+      http:
+        use_x_forwarded_for: true
+        trusted_proxies:
+          - 172.17.0.0/16
+  notify: Restart homeassistant
