@@ -1,3 +1,37 @@
+- name: Check if the persistent mariadb folder exists
+  stat:
+    path: "{{ docker_dir }}/photoprism/mariadb"
+  register: persistent_photoprism_mariadb_data
+
+
+- name: Make photoprism mariadb directory
+  file:
+    path: "{{ docker_dir }}/photoprism/mariadb"
+    owner: "{{ uid }}"
+    group: "{{ gid }}"
+    mode: "0755"
+    state: directory
+    recurse: true
+  when: not persistent_photoprism_mariadb_data.stat.exists
+
+
+- name: Check if the persistent storage folder exists
+  stat:
+    path: "{{ docker_dir }}/photoprism/storage"
+  register: persistent_photoprism_storage_data
+
+
+- name: Make photoprism storage directory
+  file:
+    path: "{{ docker_dir }}/photoprism/storage"
+    owner: "{{ uid }}"
+    group: "{{ gid }}"
+    mode: "0755"
+    state: directory
+    recurse: true
+  when: not persistent_photoprism_storage_data.stat.exists
+
+
 - name: Deploy photoprism-mariadb
   docker_container:
     name: photoprism-mariadb

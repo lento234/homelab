@@ -32,9 +32,9 @@
     # System
     # - containers/portainer
     # - containers/watchtower
-    - containers/pihole
-    - containers/nginx
-    - containers/homer
+    # - containers/pihole
+    # - containers/nginx
+    # - containers/homer
 
     # Monitoring
     # - containers/netdata
