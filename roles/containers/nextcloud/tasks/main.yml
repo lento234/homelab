@@ -37,3 +37,10 @@
     links:
       - nextcloud-mariadb
     restart_policy: unless-stopped
+
+- name: Add trusted domains
+  become: true
+  lineinfile:
+    path: "{{ docker_dir }}/nextcloud/nextcloud/config/config.php"
+    insertafter: "0 => '{{ ansible_hostname }}.{{ domain_name }}:8008'"
+    line: "          1 => 'nextcloud.{{ domain_name }}',"
