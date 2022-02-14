@@ -34,7 +34,7 @@
     # - containers/watchtower
     # - containers/pihole
     # - containers/nginx
-    # - containers/homer
+    - containers/homer
 
     # Monitoring
     # - containers/netdata
@@ -43,4 +43,4 @@
     # Media / Storage
     # - containers/plex
     # - containers/nextcloud
-    - containers/photoprism
+    # - containers/photoprism
