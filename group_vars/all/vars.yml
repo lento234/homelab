@@ -53,6 +53,7 @@ ports:
   - 81/tcp    # pi-hole dashboard
   - 443/tcp   # https
   - 1900/udp  # Plex DLNA Server
+  - 2342/tcp  # Photoprism
   - 5353/udp  # bonjour / avahi network discovery
   - 8000/tcp  # portainer
   - 8008/tcp  # nextcloud dashboard

@@ -4,7 +4,7 @@
     image: pihole/pihole:latest
     env:
       TZ: "{{ timezone }}"
-      WEBPASSWORD: "pass"
+      WEBPASSWORD: "{{ pihole_password }}"
       # ServerIP: "{{ ansible_default_ipv4.address }}"
     ports:
       - "53:53/tcp"

@@ -1,0 +1,89 @@
+- name: Deploy photoprism-mariadb
+  docker_container:
+    name: photoprism-mariadb
+    image: arm64v8/mariadb:10.6 # this mariadb image runs on ARM64-based devices only
+    command: >
+      mysqld
+      --innodb-buffer-pool-size=128M
+      --transaction-isolation=READ-COMMITTED
+      --character-set-server=utf8mb4
+      --collation-server=utf8mb4_unicode_ci
+      --max-connections=512
+      --innodb-rollback-on-timeout=OFF
+      --innodb-lock-wait-timeout=120
+    state: started
+    security_opts:
+      - seccomp:unconfined
+      - apparmor:unconfined
+    env:
+      MYSQL_ROOT_PASSWORD: "{{ mysql_root_password }}"
+      MYSQL_DATABASE: "photoprism"
+      MYSQL_USER: "photoprism"
+      MYSQL_PASSWORD: "{{ mysql_password }}"
+      TZ: "{{ timezone }}"
+    volumes:
+      - "{{ docker_dir }}/photoprism/mariadb/database:/var/lib/mysql"
+    restart_policy: unless-stopped
+
+
+- name: Deploy photoprism
+  docker_container:
+    name: photoprism
+    image: photoprism/photoprism:latest
+    links:
+      - photoprism-mariadb
+    security_opts:
+      - seccomp:unconfined
+      - apparmor:unconfined
+    ports:
+      - "2342:2342"
+    env:
+      PUID: "{{ uid }}"
+      PGID: "{{ gid }}"
+      PHOTOPRISM_UID: "{{ uid }}"
+      PHOTOPRISM_GID: "{{ gid }}"
+      TZ: "{{ timezone }}"
+      PHOTOPRISM_ADMIN_PASSWORD: "{{ photoprism_admin_password }}"
+      PHOTOPRISM_SITE_URL: "http://{{ ansible_hostname }}.{{ domain_name }}:2342/"
+      PHOTOPRISM_EXPERIMENTAL: "false"
+      PHOTOPRISM_HTTP_HOST: "0.0.0.0"
+      PHOTOPRISM_HTTP_PORT: "2342"
+      PHOTOPRISM_HTTP_COMPRESSION: "none"   # "gzip"
+      PHOTOPRISM_DATABASE_DRIVER: "mysql"
+      PHOTOPRISM_DATABASE_SERVER: "photoprism-mariadb:3306"
+      PHOTOPRISM_DATABASE_NAME: "photoprism"
+      PHOTOPRISM_DATABASE_USER: "photoprism"
+      PHOTOPRISM_DATABASE_PASSWORD: "{{ mysql_password }}"
+      PHOTOPRISM_DISABLE_CHOWN: "false"   # disables storage permission updates on startup
+      PHOTOPRISM_DISABLE_WEBDAV: "false"
+      PHOTOPRISM_DETECT_NSFW: "false"
+      PHOTOPRISM_UPLOAD_NSFW: "true"
+      # PHOTOPRISM_THUMB_FILTER: "lanczos"
+      # PHOTOPRISM_THUMB_UNCACHED: "true"
+      # PHOTOPRISM_THUMB_SIZE: "2048"
+      # PHOTOPRISM_THUMB_SIZE_UNCACHED: "7680"
+      PHOTOPRISM_JPEG_SIZE: "7680"
+      PHOTOPRISM_JPEG_QUALITY: "92"
+      # PHOTOPRISM_FFMPEG_ENCODER: "h264_qsv"
+      PHOTOPRISM_ORIGINALS_LIMIT: "5000"             # file size limit for originals in MB (increase for high-res video)
+      PHOTOPRISM_WORKERS: "2"                        # limits the number of indexing workers to reduce system load
+      PHOTOPRISM_DEBUG: "false"                      # run in debug mode (shows additional log messages)
+      PHOTOPRISM_READONLY: "false"                   # don't modify originals directory (reduced functionality)
+      PHOTOPRISM_DISABLE_SETTINGS: "false"           # disables Settings in Web UI
+      PHOTOPRISM_DISABLE_TENSORFLOW: "false"         # disables all features depending on TensorFlow
+      PHOTOPRISM_DISABLE_FACES: "false"              # disables facial recognition
+      PHOTOPRISM_DISABLE_CLASSIFICATION: "false"     # disables image classification
+      PHOTOPRISM_DARKTABLE_PRESETS: "true"           # enables Darktable presets and disables concurrent RAW conversion
+      # PHOTOPRISM_SITE_TITLE: "PhotoPrism"
+      # PHOTOPRISM_SITE_CAPTION: "Browse Your Life"
+      # PHOTOPRISM_SITE_DESCRIPTION: ""
+      # PHOTOPRISM_SITE_AUTHOR: "Lento Manickathan"
+      HOME: "/photoprism"
+    ## Hardware devices for video transcoding and machine learning (optional)
+    # devices:
+    #  - "/dev/video11:/dev/video11" # Video4Linux (h264_v4l2m2m)
+    user: "{{ uid }}:{{ gid }}"
+    working_dir: "/photoprism"
+    volumes:
+      - "{{ docker_dir }}/photoprism/storage:/photoprism/storage"
+    restart_policy: unless-stopped
