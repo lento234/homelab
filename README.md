@@ -43,7 +43,7 @@ The project contains a set of ansible playbooks use to setup (and manage) a pers
 
 ### Home automation
 
-* [ ] [home assistant](https://github.com/khuedoan/homelab) - My self-hosting infrastructure, fully automated from empty disk to operating services
+* [x] [home assistant](https://github.com/khuedoan/homelab) - My self-hosting infrastructure, fully automated from empty disk to operating services
 * [ ] [grocy](https://github.com/linuxserver/docker-grocy) - Grocy is a web-based self-hosted groceries & household management solution for your home.
 * [ ] IOT stack: influxdb, grafana
 * [ ] Roborocks: Automated home cleaning robot
