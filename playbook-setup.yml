@@ -33,7 +33,7 @@
     # - containers/portainer
     # - containers/watchtower
     # - containers/pihole
-    # - containers/nginx
+    - containers/nginx
     # - containers/homer
 
     # Monitoring

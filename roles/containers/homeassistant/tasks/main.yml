@@ -18,6 +18,7 @@
     insertafter: "http:"
     line: |
       http:
+        server_host: {{ ansible_default_ipv4.address }}
         use_x_forwarded_for: true
         trusted_proxies:
           - 172.17.0.0/16
