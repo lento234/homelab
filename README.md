@@ -51,9 +51,10 @@ The project contains a set of ansible playbooks use to setup (and manage) a pers
 ## Hardware / software stack
 
 * [x] Raspberry Pi 4 Model B 8GB: [OKdo](https://www.okdo.com/p/okdo-raspberry-pi-4-8gb-model-b-starter-kit/)
-* [x] Boot: Sandisk microSDXC 128GB
 * [x] OS: Rocky Linux 8.5 [wiki](https://wiki.rockylinux.org/en/special-interest-groups/alt-arch/raspberry-pi)
-* [ ] Storage (*planned*)
+* [x] Storage - Sandisk microSDXC 128GB (`/`, `ext4`)
+* [x] Storage - Samsung Portable T7 Touch (`/mnt/data`, `ext4`, **NFS**)
+* [ ] Storage - backup (*planned*)
 
 
 ## Setup
