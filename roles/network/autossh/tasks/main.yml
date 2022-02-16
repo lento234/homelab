@@ -1,0 +1,26 @@
+- name: Install autossh
+  become: true
+  package:
+    name: autossh
+    state: present
+
+- name: Configure autossh
+  become: true
+  template:
+    src: autossh.j2
+    dest: /etc/autossh/autossh
+    # owner: "root"
+    # group: "root"
+    mode: "0644"
+
+  notify: Restart autossh
+
+- name: Configure autossh systemd service
+  become: true
+  template:
+    src: autossh.service.j2
+    dest: /lib/systemd/system/autossh.service
+    mode: "0644"
+  notify:
+    - Reload autossh service
+    - Ensure autossh service is running

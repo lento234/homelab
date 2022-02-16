@@ -1,0 +1,8 @@
+- name: Reload autossh service
+  systemd:
+    daemon_reload: true
+
+- name: Ensure autossh service is running
+  service:
+    name: autossh
+    state: restarted
