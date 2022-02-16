@@ -9,8 +9,6 @@
   template:
     src: autossh.j2
     dest: /etc/autossh/autossh
-    # owner: "root"
-    # group: "root"
     mode: "0644"
 
   notify: Restart autossh
