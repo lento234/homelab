@@ -31,9 +31,9 @@
 
     # System
     # - containers/portainer
-    # - containers/watchtower
+    - containers/watchtower
     # - containers/pihole
-    - containers/nginx
+    # - containers/nginx
     # - containers/homer
 
     # Monitoring
@@ -46,4 +46,4 @@
     # - containers/photoprism
 
     # Home automation
-    - containers/homeassistant
+    # - containers/homeassistant
