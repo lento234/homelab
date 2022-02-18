@@ -31,10 +31,10 @@
 
     # System
     # - containers/portainer
-    - containers/watchtower
+    # - containers/watchtower
     # - containers/pihole
     # - containers/nginx
-    # - containers/homer
+    - containers/homer
 
     # Monitoring
     # - containers/netdata
