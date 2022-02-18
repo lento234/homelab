@@ -8,10 +8,8 @@
   become: true
   template:
     src: autossh.j2
-    dest: /etc/autossh/autossh
+    dest: /etc/default/autossh
     mode: "0644"
-
-  notify: Restart autossh
 
 - name: Configure autossh systemd service
   become: true
@@ -20,5 +18,5 @@
     dest: /lib/systemd/system/autossh.service
     mode: "0644"
   notify:
-    - Reload autossh service
+    - Reload systemd daemon
     - Ensure autossh service is running

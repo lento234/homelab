@@ -17,6 +17,9 @@
     # Network configuration
     # - network/firewalld
 
+    # Autossh configuration
+    - network/autossh
+
     # Network filesystem
     # - system/nfs
 
@@ -34,7 +37,7 @@
     # - containers/watchtower
     # - containers/pihole
     # - containers/nginx
-    - containers/homer
+    # - containers/homer
 
     # Monitoring
     # - containers/netdata

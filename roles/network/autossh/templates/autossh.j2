@@ -2,4 +2,4 @@ AUTOSSH_POLL=60
 AUTOSSH_FIRST_POLL=30
 AUTOSSH_GATETIME=0
 AUTOSSH_PORT=22000
-SSH_OPTION="-N -R 2222:localhost:22 {{ reverse_tunnel_hostname }}
+SSH_OPTIONS="-v -N -R {{ reverse_tunnel_port }}:localhost:22 {{ reverse_tunnel_hostname }}"
