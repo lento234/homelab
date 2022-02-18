@@ -1,5 +1,5 @@
 - name: Deploy homeassistant
-  docker_container:
+  community.docker.docker_container:
     name: homeassistant
     image: "ghcr.io/home-assistant/home-assistant:stable"
     env:
