@@ -33,7 +33,7 @@
 
 
 - name: Deploy photoprism-mariadb
-  docker_container:
+  community.docker.docker_container:
     name: photoprism-mariadb
     image: arm64v8/mariadb:10.6 # this mariadb image runs on ARM64-based devices only
     command: >
@@ -61,7 +61,7 @@
 
 
 - name: Deploy photoprism
-  docker_container:
+  community.docker.docker_container:
     name: photoprism
     image: photoprism/photoprism:latest
     links:

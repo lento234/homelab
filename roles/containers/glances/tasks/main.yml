@@ -1,5 +1,5 @@
 - name: Deploy Glances
-  docker_container:
+  community.docker.docker_container:
     name: glances
     image: nicolargo/glances
     volumes:
