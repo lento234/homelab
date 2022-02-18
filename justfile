@@ -5,6 +5,7 @@ DRIVER := "vagrant" # or "vagrant"
 DEBUG_HOSTS := "hosts.ini" # or "hosts_debug.ini"
 VAULT := "group_vars/all/vault.yml"
 VAULT_PASSWORD_FILE := "pass.key"
+EDITOR := "vim"
 
 # display help information
 help:
