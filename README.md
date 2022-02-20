@@ -7,6 +7,8 @@
 ![Molecule CI](https://img.shields.io/github/workflow/status/lento234/homelab/CI?style=flat-square)
 [![License](https://img.shields.io/badge/license-MIT-blue?style=flat-square&labelColor=000000)](#license)
 
+![Rocky Linux](https://img.shields.io/badge/-Rocky%20Linux-%2310B981?style=for-the-badge&logo=rockylinux&logoColor=white)
+
 ***`Ansible`-based personal homelab setup.***
 
 </div>
