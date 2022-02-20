@@ -26,13 +26,14 @@ The project contains a set of ansible playbooks use to setup (and manage) a pers
 * [x] [Watchtower](https://containrrr.dev/watchtower) - A container-based solution for automating Docker container base image updates.
 * [x] [nginx proxy manager](https://nginxproxymanager.com/guide/) - Nginx reverse proxy manager with dashboard.
 * [x] [pi-hole](https://pi-hole.net/) - A black hole for internet advertisements.
+* [ ] [Wireguard](https://github.com/linuxserver/docker-wireguard) - Self-hosted VPN (*optional:* or use alternative service).
 
 ## Monitoring
 
 * [x] [Netdata](https://www.netdata.cloud/) - Monitor everything in real time.
 * [x] [Glances](https://nicolargo.github.io/glances) - An *Eye* on your system.
 
-### Media / storage
+### Media / Storage
 
 * [x] [plex media server](https://hub.docker.com/r/linuxserver/plex) - Organizes video, music and photos from personal media libraries.
 * [x] [nextcloud](https://github.com/nextcloud/server) - :cloud: cloud Nextcloud server, a safe home for all your data
