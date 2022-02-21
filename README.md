@@ -45,6 +45,7 @@ The project contains a set of ansible playbooks use to setup (and manage) a pers
 * [ ] [vaultwarden](https://github.com/dani-garcia/vaultwarden) - Alternative implementation of the Bitwarden server.
 * [ ] [paperless-ng](https://github.com/jonaswinkler/paperless-ng) - A supercharged version of paperless: scan, index and archive all your physical documents.
 * [ ] [rdiff](https://rdiff-backup.net/) - Reverse differential backup tool, over a network or locally (*or use similar ideas*).
+* [ ] [Tiny tiny RSS](https://tt-rss.org/) - Web-based news feed (RSS/Atom) reader and aggregator
 
 ### Home automation
 
