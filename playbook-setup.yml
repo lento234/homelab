@@ -4,8 +4,8 @@
   roles:
     # System configuration
     # - system/init
-    # - system/ssh
     # - system/timezone
+    # - network/ssh
 
     # Update and install basic packages
     # - system/packages
