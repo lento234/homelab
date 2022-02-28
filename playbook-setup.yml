@@ -18,7 +18,7 @@
     # - network/firewalld
 
     # Autossh configuration
-    - network/autossh
+    # - network/autossh
 
     # Network filesystem
     # - system/nfs
@@ -30,23 +30,23 @@
     # Setup containers
 
     # Filesystem
-    # - containers/fs
+    # - containers/server/fs
 
     # System
-    # - containers/portainer
-    # - containers/watchtower
-    # - containers/pihole
-    # - containers/nginx
-    # - containers/homer
+    # - containers/server/portainer
+    # - containers/server/watchtower
+    # - containers/server/pihole
+    # - containers/server/nginx
+    # - containers/server/homer
 
     # Monitoring
-    # - containers/netdata
-    # - containers/glances
+    # - containers/monitoring/netdata
+    # - containers/monitoring/glances
 
     # Media / Storage
-    # - containers/plex
-    # - containers/nextcloud
-    # - containers/photoprism
+    # - containers/media/plex
+    # - containers/media/nextcloud
+    # - containers/media/photoprism
 
     # Home automation
-    # - containers/homeassistant
+    # - containers/automation/homeassistant
