@@ -112,3 +112,10 @@ services:
         subtitle: "Reverse Proxy Manager"
         url: "http://{{ ansible_hostname }}.{{ domain_name }}:8888"
         target: "_blank"
+
+  - name: "Cluster"
+    icon: "fas fa-network-wired"
+    items:
+      - name: "styx"
+        icon: "fas fa-anchor"
+        url: "http://styx.{{ domain_name }}:8080"
