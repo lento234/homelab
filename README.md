@@ -43,7 +43,7 @@ The project contains a set of ansible playbooks use to setup (and manage) a pers
 * [x] NFS - A network filesystem using the NFS protocol.
 * [x] [photoprism](https://github.com/photoprism/photoprism) - Photos App powered by Go and Google TensorFlow :rainbow: :sparkles:.
 * [ ] [vaultwarden](https://github.com/dani-garcia/vaultwarden) - Alternative implementation of the Bitwarden server.
-* [ ] [paperless-ng](https://github.com/jonaswinkler/paperless-ng) - A supercharged version of paperless: scan, index and archive all your physical documents.
+* [ ] [paperless-ngx](https://github.com/paperless-ngx/paperless-ngx) - A supercharged version of paperless: scan, index and archive all your physical documents.
 * [ ] [rdiff](https://rdiff-backup.net/) - Reverse differential backup tool, over a network or locally (*or use similar ideas*).
 * [ ] [Tiny tiny RSS](https://tt-rss.org/) - Web-based news feed (RSS/Atom) reader and aggregator
 
