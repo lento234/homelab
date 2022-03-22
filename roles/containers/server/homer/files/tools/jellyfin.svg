@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="120.38502mm"
+   height="120.38559mm"
+   viewBox="0 0 120.38502 120.38559"
+   version="1.1"
+   id="svg824"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs821">
+    <linearGradient
+       id="linear-gradient"
+       x1="110.25"
+       x2="496.14001"
+       y1="213.3"
+       y2="436.09"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         stop-color="#aa5cc3"
+         offset="0"
+         id="stop908" />
+      <stop
+         stop-color="#00a4dc"
+         offset="1"
+         id="stop910" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient729"
+       x1="110.25"
+       x2="496.14001"
+       y1="213.3"
+       y2="436.09"
+       gradientUnits="userSpaceOnUse"
+       xlink:href="#linear-gradient" />
+    <linearGradient
+       xlink:href="#linear-gradient"
+       id="linearGradient934"
+       gradientUnits="userSpaceOnUse"
+       x1="110.25"
+       y1="213.3"
+       x2="496.14001"
+       y2="436.09" />
+    <linearGradient
+       xlink:href="#linear-gradient"
+       id="linearGradient936"
+       gradientUnits="userSpaceOnUse"
+       x1="110.25"
+       y1="213.3"
+       x2="496.14001"
+       y2="436.09" />
+  </defs>
+  <g
+     id="layer1"
+     transform="translate(-47.352349,-50.548701)">
+    <g
+       transform="matrix(0.26458333,0,0,0.26458333,-231.11476,43.008073)"
+       fill="url(#linearGradient729)"
+       id="g920"
+       style="fill:url(#linearGradient729)">
+      <path
+         id="inner-shape"
+         transform="matrix(0.97763,0,0,0.97767,1029.7,5.7203)"
+         d="m 256,201.62 c -20.44,0 -86.23,119.29 -76.2,139.43 10.03,20.14 142.48,19.92 152.4,0 9.92,-19.92 -55.73,-139.42 -76.2,-139.43 z"
+         style="fill:url(#linearGradient934)" />
+      <path
+         id="outer-shape"
+         transform="matrix(0.97763,0,0,0.97767,1029.7,5.7203)"
+         d="m 256,23.3 c -61.56,0 -259.82,359.43 -229.59,420.13 30.23,60.7 429.34,60 459.24,0 C 515.55,383.43 317.62,23.3 256,23.3 Z m 150.51,367.46 c -19.59,39.33 -281.08,39.77 -300.89,0 -19.81,-39.77 110.09,-275.28 150.44,-275.28 40.35,0 170.04,235.94 150.45,275.28 z"
+         style="fill:url(#linearGradient936)" />
+    </g>
+  </g>
+</svg>
