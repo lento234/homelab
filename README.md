@@ -48,6 +48,7 @@ The project contains a set of ansible playbooks use to setup (and manage) a pers
 * [ ] [rdiff](https://rdiff-backup.net/) - Reverse differential backup tool, over a network or locally (*or use similar ideas*).
 * [ ] [Tiny tiny RSS](https://tt-rss.org/) - Web-based news feed (RSS/Atom) reader and aggregator
 * [ ] [Code Server](https://github.com/linuxserver/docker-code-server) - Code-server is VS Code running on a remote server, accessible through the browser.
+* [ ] [Jellyfin](https://hub.docker.com/r/linuxserver/jellyfin) - Jellyfin is a Free Software Media System that puts you in control of managing and streaming your media.
 
 ### Home automation
 
