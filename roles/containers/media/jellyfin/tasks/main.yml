@@ -1,0 +1,19 @@
+- name: Deploy jellyfin
+  docker_container:
+    name: jellyfin
+    image: lscr.io/linuxserver/jellyfin
+    env:
+      PUID: "{{ uid }}"
+      PGID: "{{ gid }}"
+      TZ: "{{ timezone }}"
+    volumes:
+      - "{{ docker_dir }}/jellyfin/library:/config"
+      - "{{ tv_dir }}:/data/tvshows"
+      - "{{ movies_dir }}:/data/movies"
+    devices:
+      - "/dev/video10:/dev/video10"
+      - "/dev/video11:/dev/video11"
+      - "/dev/video12:/dev/video12"
+    ports:
+      - "8096:8096"
+    restart_policy: unless-stopped
