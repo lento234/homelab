@@ -30,6 +30,7 @@ The project contains a set of ansible playbooks use to setup (and manage) a pers
 * [x] [nginx proxy manager](https://nginxproxymanager.com/guide/) - Nginx reverse proxy manager with dashboard.
 * [x] [pi-hole](https://pi-hole.net/) - A black hole for internet advertisements.
 * [ ] [Wireguard](https://github.com/linuxserver/docker-wireguard) - Self-hosted VPN (*optional:* or use alternative service, e.g. (OpenVPN)) or [Tailscale](https://tailscale.com/).
+* [ ] [healthchecks](https://github.com/healthchecks/healthchecks) - A cron monitoring tool written in Python & Django.
 
 ## Monitoring
 
@@ -42,10 +43,12 @@ The project contains a set of ansible playbooks use to setup (and manage) a pers
 * [x] [nextcloud](https://github.com/nextcloud/server) - :cloud: cloud Nextcloud server, a safe home for all your data.
 * [x] NFS - A network filesystem using the NFS protocol.
 * [x] [photoprism](https://github.com/photoprism/photoprism) - Photos App powered by Go and Google TensorFlow :rainbow: :sparkles:.
+* [x] [Jellyfin](https://hub.docker.com/r/linuxserver/jellyfin) - Jellyfin is a Free Software Media System that puts you in control of managing and streaming your media.
 * [ ] [vaultwarden](https://github.com/dani-garcia/vaultwarden) - Alternative implementation of the Bitwarden server.
 * [ ] [paperless-ngx](https://github.com/paperless-ngx/paperless-ngx) - A supercharged version of paperless: scan, index and archive all your physical documents.
 * [ ] [rdiff](https://rdiff-backup.net/) - Reverse differential backup tool, over a network or locally (*or use similar ideas*).
 * [ ] [Tiny tiny RSS](https://tt-rss.org/) - Web-based news feed (RSS/Atom) reader and aggregator
+* [ ] [Code Server](https://github.com/linuxserver/docker-code-server) - Code-server is VS Code running on a remote server, accessible through the browser.
 
 ### Home automation
 

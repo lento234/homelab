@@ -47,6 +47,7 @@
     # - containers/media/plex
     # - containers/media/nextcloud
     # - containers/media/photoprism
+    # - containers/media/jellyfin
 
     # Home automation
     # - containers/automation/homeassistant
