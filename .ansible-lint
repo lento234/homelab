@@ -1,5 +1,6 @@
 skip_list:
   - package-latest
+  - fqcn-builtins  # Use FQCN for builtin actions.
 exclude_paths:
   - environment.yml
   - roles/geerlingguy.*
