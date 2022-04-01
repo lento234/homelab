@@ -13,14 +13,14 @@
 
 - name: Create the persistent custom folder for nginx
   become: true
-  file:
+  ansible.builtin.file:
     dest: "{{ docker_dir }}/nginx/data/nginx/custom"
     state: directory
     mode: 0755
 
 - name: Copy custom proxy configuration to nginx
   become: true
-  template:
+  ansible.builtin.template:
     src: http.conf.j2
     dest: "{{ docker_dir }}/nginx/data/nginx/custom/http.conf"
     mode: "0644"

@@ -13,7 +13,7 @@
     restart_policy: always
 
 - name: Copy config files to homer
-  template:
+  ansible.builtin.template:
     src: config.yml.j2
     dest: "{{ docker_dir }}/homer/assets/config.yml"
     owner: "{{ user }}"
@@ -21,7 +21,7 @@
     mode: "0644"
 
 - name: Copy logos to homer
-  copy:
+  ansible.builtin.copy:
     src: "{{ item }}"
     dest: "{{ docker_dir }}/homer/assets/tools"
     owner: "{{ user }}"
@@ -31,7 +31,7 @@
     - "files/tools/*"
 
 - name: Copy icons to homer
-  copy:
+  ansible.builtin.copy:
     src: "{{ item }}"
     dest: "{{ docker_dir }}/homer/assets/icons"
     owner: "{{ user }}"

@@ -1,12 +1,12 @@
 - name: Check if the tv data folder exists
-  stat:
+  ansible.builtin.stat:
     path: "{{ tv_dir }}"
   register: persistent_tv_data
 
 
 - name: Create the persistent tv data folder
   become: true
-  file:
+  ansible.builtin.file:
     dest: "{{ tv_dir }}"
     state: directory
     owner: "{{ user }}"
@@ -17,14 +17,14 @@
 
 
 - name: Check if the movie data folder exists
-  stat:
+  ansible.builtin.stat:
     path: "{{ movies_dir }}"
   register: persistent_movie_data
 
 
 - name: Create the persistent movies data folder
   become: true
-  file:
+  ansible.builtin.file:
     dest: "{{ movies_dir }}"
     state: directory
     owner: "{{ user }}"

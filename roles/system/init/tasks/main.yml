@@ -1,6 +1,6 @@
 - name: Setup basic dnf packages and config
   become: true
-  dnf:
+  ansible.builtin.dnf:
     update_cache: true
     name:
       - e2fsprogs
@@ -13,14 +13,14 @@
 
 - name: Add group {{ group }}
   become: true
-  group:
+  ansible.builtin.group:
     name: "{{ group }}"
     gid: "{{ gid }}"
     state: present
 
 - name: Add user {{ user }}
   become: true
-  user:
+  ansible.builtin.user:
     name: "{{ user }}"
     uid: "{{ uid }}"
     shell: "{{ shell }}"

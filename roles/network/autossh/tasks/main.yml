@@ -1,19 +1,19 @@
 - name: Install autossh
   become: true
-  package:
+  ansible.builtin.package:
     name: autossh
     state: present
 
 - name: Configure autossh
   become: true
-  template:
+  ansible.builtin.template:
     src: autossh.j2
     dest: /etc/default/autossh
     mode: "0644"
 
 - name: Configure autossh systemd service
   become: true
-  template:
+  ansible.builtin.template:
     src: autossh.service.j2
     dest: /lib/systemd/system/autossh.service
     mode: "0644"

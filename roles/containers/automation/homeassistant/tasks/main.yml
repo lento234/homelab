@@ -13,7 +13,7 @@
 
 - name: Add trusted proxies
   become: true
-  lineinfile:
+  ansible.builtin.lineinfile:
     path: "{{ docker_dir }}/homeassistant/config/configuration.yaml"
     insertafter: "http:"
     line: |

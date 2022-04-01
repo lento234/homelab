@@ -1,12 +1,12 @@
 - name: Install nfs
   become: true
-  dnf:
+  ansible.builtin.dnf:
     name: nfs-utils
     state: latest
 
 - name: Add nfs folder to exports
   become: true
-  template:
+  ansible.builtin.template:
     src: exports.j2
     dest: /etc/exports
     owner: root

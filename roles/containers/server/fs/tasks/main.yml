@@ -1,11 +1,11 @@
 - name: Check if the persistent data folder exists
-  stat:
+  ansible.builtin.stat:
     path: "{{ docker_dir }}"
   register: persistent_data
 
 - name: Create the persistent data folder for docker containers
   become: true
-  file:
+  ansible.builtin.file:
     dest: "{{ docker_dir }}"
     state: directory
     owner: "{{ user }}"

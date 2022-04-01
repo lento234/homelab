@@ -1,11 +1,11 @@
 - name: Reload systemd daemon
   become: true
-  systemd:
+  ansible.builtin.systemd:
     daemon_reload: true
 
 - name: Ensure autossh service is running
   become: true
-  service:
+  ansible.builtin.service:
     name: autossh
     state: restarted
     enabled: true

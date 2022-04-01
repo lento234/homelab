@@ -1,6 +1,6 @@
 - name: Install firewalld and dependencies
   become: true
-  dnf:
+  ansible.builtin.dnf:
     name:
       - firewalld
       - python3-firewall
