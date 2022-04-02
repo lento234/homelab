@@ -1,6 +1,6 @@
 - name: Restart nfs
   become: true
-  service:
+  ansible.builtin.service:
     name: "{{ item }}"
     enabled: true
     state: restarted

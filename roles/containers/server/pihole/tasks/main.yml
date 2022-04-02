@@ -20,7 +20,7 @@
 
 - name: Copy custom local DNS domains to pihole
   become: true
-  template:
+  ansible.builtin.template:
     src: custom.list.j2
     dest: "{{ docker_dir }}/pihole/etc-pihole/custom.list"
     mode: "0644"

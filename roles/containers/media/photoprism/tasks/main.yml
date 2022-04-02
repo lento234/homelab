@@ -1,11 +1,11 @@
 - name: Check if the persistent mariadb folder exists
-  stat:
+  ansible.builtin.stat:
     path: "{{ docker_dir }}/photoprism/mariadb"
   register: persistent_photoprism_mariadb_data
 
 
 - name: Make photoprism mariadb directory
-  file:
+  ansible.builtin.file:
     path: "{{ docker_dir }}/photoprism/mariadb"
     owner: "{{ uid }}"
     group: "{{ gid }}"
@@ -16,13 +16,13 @@
 
 
 - name: Check if the persistent storage folder exists
-  stat:
+  ansible.builtin.stat:
     path: "{{ docker_dir }}/photoprism/storage"
   register: persistent_photoprism_storage_data
 
 
 - name: Make photoprism storage directory
-  file:
+  ansible.builtin.file:
     path: "{{ docker_dir }}/photoprism/storage"
     owner: "{{ uid }}"
     group: "{{ gid }}"

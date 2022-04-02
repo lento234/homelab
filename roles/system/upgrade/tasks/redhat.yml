@@ -1,11 +1,11 @@
 - name: Update dnf packages
   become: true
-  dnf:
+  ansible.builtin.dnf:
     update_cache: true
     name: "*"
     state: latest
 
 - name: Autoremove unneeded dnf packages
   become: true
-  dnf:
+  ansible.builtin.dnf:
     autoremove: true

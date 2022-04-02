@@ -1,12 +1,12 @@
 - name: Setup auto updates using dnf-automatic
   become: true
-  dnf:
+  ansible.builtin.dnf:
     name: dnf-automatic
     state: present
 
 - name: Ensure auto updates are enabled
   become: true
-  service:
+  ansible.builtin.service:
     name: dnf-automatic-install.timer
     enabled: true
     state: started
