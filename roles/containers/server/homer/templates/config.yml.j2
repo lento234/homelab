@@ -57,12 +57,6 @@ services:
         url: "http://{{ ansible_hostname }}.{{ domain_name }}:32400"
         target: "_blank"
 
-      - name: "Nextcloud"
-        logo: "assets/tools/nextcloud.png"
-        subtitle: "File hosting at home"
-        url: "http://{{ ansible_hostname }}.{{ domain_name }}:8008"
-        target: "_blank"
-
       - name: "Photoprism"
         logo: "assets/tools/photoprism.svg"
         subtitle: "Photo storage at home"
@@ -73,6 +67,21 @@ services:
         logo: "assets/tools/jellyfin.svg"
         subtitle: "Stream Movies & TV Shows"
         url: "http://{{ ansible_hostname }}.{{ domain_name }}:8096"
+        target: "_blank"
+
+  - name: "File Storage"
+    icon: "fas fa-folder"
+    items:
+      - name: "Paperless-ngx"
+        logo: "assets/tools/paperless-ngx.svg"
+        subtitle: "Document management system"
+        url: "http://{{ ansible_hostname }}.{{ domain_name }}:8001"
+        target: "_blank"
+
+      - name: "Nextcloud"
+        logo: "assets/tools/nextcloud.png"
+        subtitle: "File hosting at home"
+        url: "http://{{ ansible_hostname }}.{{ domain_name }}:8008"
         target: "_blank"
 
   - name: "Automation"

@@ -48,6 +48,7 @@
     # - containers/media/nextcloud
     # - containers/media/photoprism
     # - containers/media/jellyfin
+    - containers/media/paperless-ngx
 
     # Home automation
     # - containers/automation/homeassistant

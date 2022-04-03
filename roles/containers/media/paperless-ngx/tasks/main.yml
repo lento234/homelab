@@ -1,0 +1,29 @@
+- name: Check if paperless-ngx directory exists
+  ansible.builtin.stat:
+    path: "{{ docker_dir }}/paperlessngx"
+  register: paperless_ngx_dir_exists
+
+- name: Create paperless-ngx directory
+  ansible.builtin.file:
+    dest: "{{ docker_dir }}/paperless-ngx"
+    state: directory
+    owner: "{{ user }}"
+    group: "{{ user }}"
+    mode: 0755
+    recurse: true
+  when: not paperless_ngx_dir_exists.stat.exists
+
+- name: Deploy paperless-ngx
+  community.docker.docker_container:
+    name: paperless-ngx
+    image: lscr.io/linuxserver/paperless-ngx
+    env:
+      PUID: "{{ uid }}"
+      PGID: "{{ gid }}"
+      TZ: "{{ timezone }}"
+    volumes:
+      - "{{ docker_dir }}/paperless-ngx/config:/config"
+      - "{{ docker_dir }}/paperless-ngx/data:/data"
+    ports:
+      - "8001:8000/tcp"
+    restart_policy: unless-stopped
