@@ -37,18 +37,19 @@ The project contains a set of ansible playbooks use to setup (and manage) a pers
 * [x] [Netdata](https://www.netdata.cloud/) - Monitor everything in real time.
 * [x] [Glances](https://nicolargo.github.io/glances) - An *Eye* on your system.
 
-### Media / Storage
+### Media
 
 * [x] [plex media server](https://hub.docker.com/r/linuxserver/plex) - Organizes video, music and photos from personal media libraries.
-* [x] [nextcloud](https://github.com/nextcloud/server) - :cloud: cloud Nextcloud server, a safe home for all your data.
-* [x] NFS - A network filesystem using the NFS protocol.
 * [x] [photoprism](https://github.com/photoprism/photoprism) - Photos App powered by Go and Google TensorFlow :rainbow: :sparkles:.
 * [x] [Jellyfin](https://hub.docker.com/r/linuxserver/jellyfin) - Jellyfin is a Free Software Media System that puts you in control of managing and streaming your media.
 * [ ] [vaultwarden](https://github.com/dani-garcia/vaultwarden) - Alternative implementation of the Bitwarden server.
-* [ ] [paperless-ngx](https://github.com/paperless-ngx/paperless-ngx) - A supercharged version of paperless: scan, index and archive all your physical documents.
+
+### File storage
+
+* [x] [nextcloud](https://github.com/nextcloud/server) - :cloud: cloud Nextcloud server, a safe home for all your data.
+* [x] [paperless-ngx](https://github.com/paperless-ngx/paperless-ngx) - A supercharged version of paperless: scan, index and archive all your physical documents.
+* [x] NFS - A network filesystem using the NFS protocol.
 * [ ] [rdiff](https://rdiff-backup.net/) - Reverse differential backup tool, over a network or locally (*or use similar ideas*).
-* [ ] [Tiny tiny RSS](https://tt-rss.org/) - Web-based news feed (RSS/Atom) reader and aggregator
-* [ ] [Code Server](https://github.com/linuxserver/docker-code-server) - Code-server is VS Code running on a remote server, accessible through the browser.
 
 ### Home automation
 
@@ -56,6 +57,12 @@ The project contains a set of ansible playbooks use to setup (and manage) a pers
 * [ ] [grocy](https://github.com/linuxserver/docker-grocy) - Grocy is a web-based self-hosted groceries & household management solution for your home.
 * [ ] IOT stack: influxdb, grafana
 * [ ] Roborocks: Automated home cleaning robot
+
+### Misc
+
+* [ ] [Tiny tiny RSS](https://tt-rss.org/) - Web-based news feed (RSS/Atom) reader and aggregator
+* [ ] [Code Server](https://github.com/linuxserver/docker-code-server) - Code-server is VS Code running on a remote server, accessible through the browser.
+
 
 ## Hardware / software stack
 
