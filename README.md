@@ -32,7 +32,7 @@ The project contains a set of ansible playbooks use to setup (and manage) a pers
 * [ ] [Wireguard](https://github.com/linuxserver/docker-wireguard) - Self-hosted VPN (*optional:* or use alternative service, e.g. (OpenVPN)) or [Tailscale](https://tailscale.com/).
 * [ ] [healthchecks](https://github.com/healthchecks/healthchecks) - A cron monitoring tool written in Python & Django.
 
-## Monitoring
+### Monitoring
 
 * [x] [Netdata](https://www.netdata.cloud/) - Monitor everything in real time.
 * [x] [Glances](https://nicolargo.github.io/glances) - An *Eye* on your system.
