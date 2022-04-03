@@ -37,7 +37,7 @@
     # - containers/server/watchtower
     # - containers/server/pihole
     # - containers/server/nginx
-    # - containers/server/homer
+    - containers/server/homer
 
     # Monitoring
     # - containers/monitoring/netdata
