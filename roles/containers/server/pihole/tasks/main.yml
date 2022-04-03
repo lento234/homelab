@@ -1,7 +1,7 @@
 - name: Deploy Pi-hole
   community.docker.docker_container:
     name: pihole
-    image: pihole/pihole:latest
+    image: pihole/pihole:2022.04.1
     env:
       TZ: "{{ timezone }}"
       WEBPASSWORD: "{{ pihole_password }}"
@@ -16,7 +16,7 @@
     privileged: true
     hostname: "{{ inventory_hostname }}"
     domainname: "{{ inventory_hostname }}"
-    restart_policy: always
+    restart_policy: unless-stopped
 
 - name: Copy custom local DNS domains to pihole
   become: true
