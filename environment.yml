@@ -6,8 +6,4 @@ dependencies:
   - python=3.9
   - just
   - pip:
-    - ansible
-    - docker
-    - docker-compose
-    - pre-commit
-    - molecule[docker]
+    - -r requirements.txt
