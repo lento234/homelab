@@ -37,7 +37,7 @@
     # - containers/server/watchtower
     # - containers/server/pihole
     # - containers/server/nginx
-    - containers/server/homer
+    # - containers/server/homer
 
     # Monitoring
     # - containers/monitoring/netdata
@@ -48,7 +48,7 @@
     # - containers/media/nextcloud
     # - containers/media/photoprism
     # - containers/media/jellyfin
-    - containers/media/paperless-ngx
+    # - containers/media/paperless-ngx
 
     # Home automation
-    # - containers/automation/homeassistant
+    - containers/automation/homeassistant
