@@ -69,6 +69,12 @@ services:
         url: "http://{{ ansible_hostname }}.{{ domain_name }}:8096"
         target: "_blank"
 
+      - name: "Transmission"
+        logo: "assets/tools/transmission.svg"
+        subtitle: "Bittorrent client"
+        url: "http://{{ ansible_hostname }}.{{ domain_name }}:9091"
+        target: "_blank"
+
   - name: "File Storage"
     icon: "fas fa-folder"
     items:
