@@ -32,12 +32,12 @@
     # Filesystem
     # - containers/server/fs
 
-    # System
+    # Server
     # - containers/server/portainer
     # - containers/server/watchtower
     # - containers/server/pihole
     # - containers/server/nginx
-    # - containers/server/homer
+    - containers/server/homer
 
     # Monitoring
     # - containers/monitoring/netdata
@@ -49,7 +49,7 @@
     # - containers/media/photoprism
     # - containers/media/jellyfin
     # - containers/media/paperless-ngx
-    - containers/media/transmission
+    # - containers/media/transmission
 
     # Home automation
     # - containers/automation/homeassistant
