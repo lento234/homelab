@@ -49,6 +49,7 @@
     # - containers/media/photoprism
     # - containers/media/jellyfin
     # - containers/media/paperless-ngx
+    - containers/media/transmission
 
     # Home automation
-    - containers/automation/homeassistant
+    # - containers/automation/homeassistant

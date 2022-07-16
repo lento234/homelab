@@ -41,6 +41,8 @@ storage_dir: "/mnt/data"
 # Docker volumes
 docker_dir: "{{ storage_dir }}/docker"
 
+# Media directories
+media_dir: "{{ storage_dir }}/media"
 tv_dir: "{{ storage_dir }}/media/tv"
 movies_dir: "{{ storage_dir }}/media/movies"
 
@@ -64,10 +66,13 @@ ports:
   - 8324/tcp  # plex for roku (optional)
   - 8888/tcp  # nginx dashboard
   - 9000/tcp  # portainer dashboard
+  - 9091/tcp  # transmission
   - 19999/tcp   # netdata dashboard
   - 32400/tcp   # Plex Media Server
   - 32410/udp   # current GDM network discovery
   - 32469/tcp   # Plex DLNA Server
+  - 51413/tcp   # transmission
+  - 51413/udp   # transmission
   - 61208/tcp   # glances
   - 61209/tcp   # glances
 
