@@ -50,6 +50,7 @@
     # - containers/media/jellyfin
     # - containers/media/paperless-ngx
     # - containers/media/transmission
+    # - containers/media/freshrss
 
     # Home automation
     # - containers/automation/homeassistant

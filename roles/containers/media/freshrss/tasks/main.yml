@@ -1,0 +1,13 @@
+- name: Deploy freshrss
+  docker_container:
+    name: freshrss
+    image: lscr.io/linuxserver/freshrss:latest
+    env:
+      PUID: "{{ uid }}"
+      PGID: "{{ gid }}"
+      TZ: "{{ timezone }}"
+    volumes:
+      - "{{ docker_dir }}/freshrss:/config"
+    ports:
+      - "11111:80"
+    restart_policy: unless-stopped
