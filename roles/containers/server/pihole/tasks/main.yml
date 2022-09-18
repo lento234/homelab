@@ -1,7 +1,7 @@
 - name: Deploy Pi-hole
   community.docker.docker_container:
     name: pihole
-    image: pihole/pihole:2022.04.1
+    image: pihole/pihole:latest
     env:
       TZ: "{{ timezone }}"
       WEBPASSWORD: "{{ pihole_password }}"
