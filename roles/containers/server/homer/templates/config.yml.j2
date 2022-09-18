@@ -75,6 +75,12 @@ services:
         url: "http://{{ ansible_hostname }}:9091"
         target: "_blank"
 
+      - name: "Freshrss"
+        logo: "assets/tools/freshrss.png"
+        subtitle: "RSS feed aggregator"
+        url: "http://{{ ansible_hostname }}:11111"
+        target: "_blank"
+
   - name: "File Storage"
     icon: "fas fa-folder"
     items:
