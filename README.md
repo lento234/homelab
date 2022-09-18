@@ -60,7 +60,7 @@ The project contains a set of ansible playbooks use to setup (and manage) a pers
 
 ### Misc
 
-* [ ] [Tiny tiny RSS](https://tt-rss.org/) - Web-based news feed (RSS/Atom) reader and aggregator
+* [x] [FreshRSS](https://www.freshrss.org/) - A free, self-hostable aggregator.
 * [ ] [Code Server](https://github.com/linuxserver/docker-code-server) - Code-server is VS Code running on a remote server, accessible through the browser.
 
 
