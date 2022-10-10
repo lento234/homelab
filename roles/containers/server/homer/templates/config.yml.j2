@@ -57,22 +57,16 @@ services:
         url: "http://{{ ansible_hostname }}:32400"
         target: "_blank"
 
-      - name: "Photoprism"
-        logo: "assets/tools/photoprism.svg"
-        subtitle: "Photo storage at home"
-        url: "http://{{ ansible_hostname }}:2342"
-        target: "_blank"
-
       - name: "Jellyfin"
         logo: "assets/tools/jellyfin.svg"
         subtitle: "Stream Movies & TV Shows"
         url: "http://{{ ansible_hostname }}:8096"
         target: "_blank"
 
-      - name: "Transmission"
-        logo: "assets/tools/transmission.svg"
-        subtitle: "Bittorrent client"
-        url: "http://{{ ansible_hostname }}:9091"
+      - name: "Salt TV"
+        logo: "assets/tools/salt-tv.svg"
+        subtitle: "Stream TV live and on demand."
+        url: "https://tv.salt.ch/"
         target: "_blank"
 
       - name: "Freshrss"
@@ -81,7 +75,7 @@ services:
         url: "http://{{ ansible_hostname }}:11111"
         target: "_blank"
 
-  - name: "File Storage"
+  - name: "File Storage/Sharing"
     icon: "fas fa-folder"
     items:
       - name: "Paperless-ngx"
@@ -94,6 +88,18 @@ services:
         logo: "assets/tools/nextcloud.png"
         subtitle: "File hosting at home"
         url: "http://{{ ansible_hostname }}:8008"
+        target: "_blank"
+
+      - name: "Photoprism"
+        logo: "assets/tools/photoprism.svg"
+        subtitle: "Photo storage at home"
+        url: "http://{{ ansible_hostname }}:2342"
+        target: "_blank"
+
+      - name: "Transmission"
+        logo: "assets/tools/transmission.svg"
+        subtitle: "Bittorrent client"
+        url: "http://{{ ansible_hostname }}:9091"
         target: "_blank"
 
   - name: "Automation"
