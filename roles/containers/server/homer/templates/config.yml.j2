@@ -75,7 +75,7 @@ services:
         url: "http://{{ ansible_hostname }}:11111"
         target: "_blank"
 
-  - name: "File Storage/Sharing"
+  - name: "File Storage & Sharing"
     icon: "fas fa-folder"
     items:
       - name: "Paperless-ngx"
@@ -102,15 +102,6 @@ services:
         url: "http://{{ ansible_hostname }}:9091"
         target: "_blank"
 
-  - name: "Automation"
-    icon: "fas fa-cogs"
-    items:
-      - name: "Home Assistant"
-        logo: "assets/tools/hass.svg"
-        subtitle: "Home automation"
-        url: "http://{{ ansible_hostname }}:8123"
-        target: "_blank"
-
   - name: "Monitoring"
     icon: "fas fa-desktop"
     items:
@@ -124,6 +115,15 @@ services:
         logo: "assets/tools/netdata.png"
         subtitle: "System Monitoring"
         url: "http://{{ ansible_hostname }}:19999"
+        target: "_blank"
+
+  - name: "Automation"
+    icon: "fas fa-cogs"
+    items:
+      - name: "Home Assistant"
+        logo: "assets/tools/hass.svg"
+        subtitle: "Home automation"
+        url: "http://{{ ansible_hostname }}:8123"
         target: "_blank"
 
   - name: "Server"
