@@ -6,6 +6,6 @@
     - name: Update apt cache (on Debian)
       ansible.builtin.apt:
         update_cache: true
-      when: ansible_os_family|lower == 'debian'
+      when: ansible_os_family | lower == 'debian'
 
 - import_playbook: "../../playbook-main.yml"

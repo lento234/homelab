@@ -1,7 +1,9 @@
-- include_tasks: redhat.yml
+- name: "Include redhat tasks"
+  ansible.builtin.include_tasks: redhat.yml
   when: ansible_os_family|lower == 'redhat'
 
-- include_tasks: debian.yml
+- name: "Include debian tasks"
+  ansible.builtin.include_tasks: debian.yml
   when: ansible_os_family|lower == 'debian'
 
 - name: Check if reboot required

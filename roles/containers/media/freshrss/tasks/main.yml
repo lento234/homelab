@@ -1,5 +1,5 @@
 - name: Deploy freshrss
-  docker_container:
+  community.docker.docker_container:
     name: freshrss
     image: lscr.io/linuxserver/freshrss:latest
     env:

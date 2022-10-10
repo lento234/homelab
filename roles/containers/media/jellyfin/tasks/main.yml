@@ -1,5 +1,5 @@
 - name: Deploy jellyfin
-  docker_container:
+  community.docker.docker_container:
     name: jellyfin
     image: lscr.io/linuxserver/jellyfin
     env:
