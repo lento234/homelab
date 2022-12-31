@@ -1,0 +1,9 @@
+- name: Install avahi-daemon and dependencies
+  become: true
+  ansible.builtin.dnf:
+    name:
+      - nss-mdns
+      - avahi
+    state: present
+  notify:
+    - Restart avahi
