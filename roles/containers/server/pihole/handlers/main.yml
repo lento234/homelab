@@ -1,4 +1,4 @@
 - name: Restart pihole
   community.docker.docker_container:
-    name: nginx
+    name: pihole
     restart: true

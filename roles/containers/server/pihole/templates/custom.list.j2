@@ -1,6 +1,7 @@
-{{ ansible_default_ipv4.gateway }} router.{{ domain_name }}
-{{ ansible_default_ipv4.address }} heimdall.{{ domain_name }}
-{{ ansible_default_ipv4.address }} pihole.{{ domain_name }}
+{{ ansible_default_ipv4.gateway }} router
+{{ ansible_default_ipv4.address }} heimdall
+{{ nas.address }} {{ nas.hostname }}
+{# {{ ansible_default_ipv4.address }} pihole.{{ domain_name }}
 {{ ansible_default_ipv4.address }} nginx.{{ domain_name }}
 {{ ansible_default_ipv4.address }} portainer.{{ domain_name }}
 {{ ansible_default_ipv4.address }} plex.{{ domain_name }}
@@ -8,4 +9,4 @@
 {{ ansible_default_ipv4.address }} nextcloud.{{ domain_name }}
 {{ ansible_default_ipv4.address }} glances.{{ domain_name }}
 {{ ansible_default_ipv4.address }} photoprism.{{ domain_name }}
-{{ ansible_default_ipv4.address }} hass.{{ domain_name }}
+{{ ansible_default_ipv4.address }} hass.{{ domain_name }} #}
