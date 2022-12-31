@@ -4,9 +4,14 @@ gid: "1000"
 shell: /bin/zsh
 sudo_group: wheel
 
+# NAS
+nas:
+  hostname: ohara
+  address: 10.0.0.123
+
 # Locale
 timezone: Europe/Zurich
-domain_name: manickathan.ch
+domain_name: local
 
 # Install packages
 packages:

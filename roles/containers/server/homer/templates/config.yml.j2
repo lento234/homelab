@@ -3,10 +3,9 @@
 title: "Homelab"
 subtitle: "{{ ansible_hostname }}"
 logo: "assets/tools/homer.svg"
-icon: "assets/icons/icon-any.png"
 
 header: true
-footer: '<p>Made with <i class="fas fa-heart"></i> by <a href="https://manickathan.ch/">Lento</a>.</p>'
+footer: '<p>Made with <i class="fas fa-heart"></i> by <a href="https://lento234.ch/">Lento</a>.</p>'
 
 # columns: "3"
 connectivityCheck: true
@@ -54,13 +53,13 @@ services:
       - name: "Plex Media Server"
         logo: "assets/tools/plex.png"
         subtitle: "Stream Movies & TV Shows"
-        url: "http://{{ ansible_hostname }}:32400"
+        url: "http://{{ ansible_hostname }}.{{ domain_name }}:32400"
         target: "_blank"
 
       - name: "Jellyfin"
         logo: "assets/tools/jellyfin.svg"
         subtitle: "Stream Movies & TV Shows"
-        url: "http://{{ ansible_hostname }}:8096"
+        url: "http://{{ ansible_hostname }}.{{ domain_name }}:8096"
         target: "_blank"
 
       - name: "Salt TV"
@@ -72,7 +71,7 @@ services:
       - name: "Freshrss"
         logo: "assets/tools/freshrss.png"
         subtitle: "RSS feed aggregator"
-        url: "http://{{ ansible_hostname }}:11111"
+        url: "http://{{ ansible_hostname }}.{{ domain_name }}:11111"
         target: "_blank"
 
   - name: "File Storage & Sharing"
@@ -81,25 +80,25 @@ services:
       - name: "Paperless-ngx"
         logo: "assets/tools/paperless-ngx.svg"
         subtitle: "Document management system"
-        url: "http://{{ ansible_hostname }}:8001"
+        url: "http://{{ ansible_hostname }}.{{ domain_name }}:8001"
         target: "_blank"
 
       - name: "Nextcloud"
         logo: "assets/tools/nextcloud.png"
         subtitle: "File hosting at home"
-        url: "http://{{ ansible_hostname }}:8008"
+        url: "http://{{ ansible_hostname }}.{{ domain_name }}:8008"
         target: "_blank"
 
       - name: "Photoprism"
         logo: "assets/tools/photoprism.svg"
         subtitle: "Photo storage at home"
-        url: "http://{{ ansible_hostname }}:2342"
+        url: "http://{{ ansible_hostname }}.{{ domain_name }}:2342"
         target: "_blank"
 
       - name: "Transmission"
         logo: "assets/tools/transmission.svg"
         subtitle: "Bittorrent client"
-        url: "http://{{ ansible_hostname }}:9091"
+        url: "http://{{ ansible_hostname }}.{{ domain_name }}:9091"
         target: "_blank"
 
   - name: "Monitoring"
@@ -108,14 +107,14 @@ services:
       - name: "Glances"
         logo: "assets/tools/glances.png"
         subtitle: "Monitoring tool"
-        url: "http://{{ ansible_hostname }}:61208"
+        url: "http://{{ ansible_hostname }}.{{ domain_name }}:61208"
         target: "_blank"
 
-      - name: "Netdata"
+      {# - name: "Netdata"
         logo: "assets/tools/netdata.png"
         subtitle: "System Monitoring"
-        url: "http://{{ ansible_hostname }}:19999"
-        target: "_blank"
+        url: "http://{{ ansible_hostname }}.{{ domain_name }}:19999"
+        target: "_blank" #}
 
   - name: "Automation"
     icon: "fas fa-cogs"
@@ -123,7 +122,7 @@ services:
       - name: "Home Assistant"
         logo: "assets/tools/hass.svg"
         subtitle: "Home automation"
-        url: "http://{{ ansible_hostname }}:8123"
+        url: "http://{{ ansible_hostname }}.{{ domain_name }}:8123"
         target: "_blank"
 
   - name: "Server"
@@ -132,12 +131,12 @@ services:
       - name: "Portainer"
         logo: "assets/tools/portainer.png"
         subtitle: "Docker Container Management"
-        url: "http://{{ ansible_hostname }}:9000"
+        url: "http://{{ ansible_hostname }}.{{ domain_name }}:9000"
         target: "_blank"
 
       - name: "Pi-hole"
         logo: "assets/tools/pi-hole.png"
-        url: "http://{{ ansible_hostname }}:81/admin"
+        url: "http://{{ ansible_hostname }}.{{ domain_name }}:81/admin"
         type: "PiHole"
 
       {# - name: "Nginx Proxy Manager"
@@ -152,3 +151,7 @@ services:
       - name: "styx"
         icon: "fas fa-anchor"
         url: "http://styx:8080"
+
+      - name: "{{ nas.hostname }}"
+        icon: "fas fa-database"
+        url: "http://{{ nas.hostname }}.{{ domain_name}}"

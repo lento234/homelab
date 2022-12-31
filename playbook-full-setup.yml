@@ -1,0 +1,56 @@
+- name: Playbook to manage all infra
+  hosts: homelab
+
+  roles:
+    # System configuration
+    - system/init
+    - system/timezone
+    - network/ssh
+
+    # Update and install basic packages
+    - system/packages
+    - system/upgrade
+
+    # Setup dnf autoupdate
+    - system/dnfautomatic # Install automatic updates
+
+    # Network configuration
+    - network/firewalld
+
+    # Autossh configuration
+    - network/autossh
+
+    # Network filesystem
+    - system/nfs
+
+    # Install docker
+    - role: geerlingguy.docker
+      become: true
+
+    # Setup containers
+
+    # Filesystem
+    - containers/server/fs
+
+    # Server
+    - containers/server/portainer
+    - containers/server/watchtower
+    - containers/server/pihole
+    - containers/server/nginx
+    - containers/server/homer
+
+    # Monitoring
+    - containers/monitoring/netdata
+    - containers/monitoring/glances
+
+    # Media / Storage
+    - containers/media/plex
+    - containers/media/nextcloud
+    - containers/media/photoprism
+    - containers/media/jellyfin
+    - containers/media/paperless-ngx
+    - containers/media/transmission
+    - containers/media/freshrss
+
+    # Home automation
+    - containers/automation/homeassistant
