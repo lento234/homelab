@@ -22,55 +22,44 @@ The project contains a set of ansible playbooks use to setup (and manage) a pers
 
 ## Hosted services
 
-### Server management
+**Server management**
 
 * [x] [homer](https://github.com/bastienwirtz/homer) - A very simple static homepage for your server.
 * [x] [portainer.io](https://docs.portainer.io/v/ce-2.11/) - A centralized service delivery platform for containerized apps.
 * [x] [Watchtower](https://containrrr.dev/watchtower) - A container-based solution for automating Docker container base image updates.
-* [x] [nginx proxy manager](https://nginxproxymanager.com/guide/) - Nginx reverse proxy manager with dashboard.
-* [x] [pi-hole](https://pi-hole.net/) - A black hole for internet advertisements.
 * [ ] [Wireguard](https://github.com/linuxserver/docker-wireguard) - Self-hosted VPN (*optional:* or use alternative service, e.g. (OpenVPN)) or [Tailscale](https://tailscale.com/).
 * [ ] [healthchecks](https://github.com/healthchecks/healthchecks) - A cron monitoring tool written in Python & Django.
-
-### Monitoring
-
-* [x] [Netdata](https://www.netdata.cloud/) - Monitor everything in real time.
-* [x] [Glances](https://nicolargo.github.io/glances) - An *Eye* on your system.
-
-### Media
-
-* [x] [plex media server](https://hub.docker.com/r/linuxserver/plex) - Organizes video, music and photos from personal media libraries.
-* [x] [photoprism](https://github.com/photoprism/photoprism) - Photos App powered by Go and Google TensorFlow :rainbow: :sparkles:.
-* [x] [Jellyfin](https://hub.docker.com/r/linuxserver/jellyfin) - Jellyfin is a Free Software Media System that puts you in control of managing and streaming your media.
-* [ ] [vaultwarden](https://github.com/dani-garcia/vaultwarden) - Alternative implementation of the Bitwarden server.
-
-### File storage
-
-* [x] [nextcloud](https://github.com/nextcloud/server) - :cloud: cloud Nextcloud server, a safe home for all your data.
-* [x] [paperless-ngx](https://github.com/paperless-ngx/paperless-ngx) - A supercharged version of paperless: scan, index and archive all your physical documents.
-* [x] NFS - A network filesystem using the NFS protocol.
 * [ ] [rdiff](https://rdiff-backup.net/) - Reverse differential backup tool, over a network or locally (*or use similar ideas*).
 
-### Home automation
+
+**Monitoring**
+
+* [x] [Glances](https://nicolargo.github.io/glances) - An *Eye* on your system.
+
+**Media**
+
+* [x] [plex media server](https://hub.docker.com/r/linuxserver/plex) - Organizes video, music and photos from personal media libraries.
+* [x] [FreshRSS](https://www.freshrss.org/) - A free, self-hostable RSS feed aggregator.
+
+
+**File storage & Sharing**
+
+* [x] [nextcloud](https://github.com/nextcloud/server) - :cloud: cloud Nextcloud server, a safe home for all your data.
+* [x] [photoprism](https://github.com/photoprism/photoprism) - Photos App powered by Go and Google TensorFlow :rainbow: :sparkles:.
+* [ ] [vaultwarden](https://github.com/dani-garcia/vaultwarden) - Alternative implementation of the Bitwarden server.
+
+
+**Automation**
 
 * [x] [home assistant](https://github.com/khuedoan/homelab) - My self-hosting infrastructure, fully automated from empty disk to operating services.
 * [ ] [grocy](https://github.com/linuxserver/docker-grocy) - Grocy is a web-based self-hosted groceries & household management solution for your home.
-* [ ] IOT stack: influxdb, grafana
-* [ ] Roborocks: Automated home cleaning robot
-
-### Misc
-
-* [x] [FreshRSS](https://www.freshrss.org/) - A free, self-hostable RSS feed aggregator.
-* [ ] [Code Server](https://github.com/linuxserver/docker-code-server) - Code-server is VS Code running on a remote server, accessible through the browser.
-
 
 ## Hardware / software stack
 
 * [x] Raspberry Pi 4 Model B 8GB: [OKdo](https://www.okdo.com/p/okdo-raspberry-pi-4-8gb-model-b-starter-kit/)
 * [x] OS: Rocky Linux 8.5 [wiki](https://wiki.rockylinux.org/en/special-interest-groups/alt-arch/raspberry-pi)
-* [x] Storage - Sandisk microSDXC 128GB (`/`, `ext4`)
-* [x] Storage - Samsung Portable T7 Touch (`/mnt/data`, `ext4`, **NFS**)
-* [ ] Storage - backup (*planned*)
+* [x] Storage - (primary) Sandisk microSDXC 128GB (`/`, `ext4`)
+* [x] Storage - (data) ZFS pool ~40 TB (`/mnt/store/`)
 
 
 ## Setup
