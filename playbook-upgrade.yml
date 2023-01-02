@@ -22,10 +22,10 @@
     # - containers/monitoring/glances
 
     # Media / Storage
-    # - containers/media/plex
+    - containers/media/plex
     # - containers/media/nextcloud
     # - containers/media/photoprism
-    - containers/media/transmission
+    # - containers/media/transmission
     # - containers/media/freshrss
 
     # Home automation

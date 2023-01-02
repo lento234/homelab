@@ -10,7 +10,7 @@
     volumes:
       - "{{ docker_dir }}/transmission:/config"
       - "{{ media_dir }}:/downloads"
-      - "{{ media_dir }}/downloads/watch:/watch"
+      - "{{ media_dir }}/watch:/watch"
     ports:
       - "9091:9091"
       - "51413:51413"

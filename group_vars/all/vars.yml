@@ -47,7 +47,7 @@ docker_users:
 docker_dir: "/mnt/store/docker"
 
 # Media directories
-media_dir: "/mnt/share/media"
+media_dir: "/mnt/data/media"
 tv_dir: "{{ media_dir }}/tv"
 movies_dir: "{{ media_dir }}/movies"
 
