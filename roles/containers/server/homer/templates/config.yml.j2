@@ -61,6 +61,7 @@ services:
         subtitle: "Stream TV live and on demand."
         url: "https://tv.salt.ch/"
         target: "_blank"
+        tag: "extern"
 
       - name: "Freshrss"
         logo: "assets/tools/freshrss.png"
@@ -127,3 +128,4 @@ services:
       - name: "{{ nas.hostname }}"
         icon: "fas fa-database"
         url: "http://{{ nas.hostname }}.{{ domain_name}}"
+        tag: "nas"

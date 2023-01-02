@@ -16,7 +16,7 @@
     # Server
     # - containers/server/portainer
     # - containers/server/watchtower
-    # - containers/server/homer
+    - containers/server/homer
 
     # Monitoring
     # - containers/monitoring/glances
