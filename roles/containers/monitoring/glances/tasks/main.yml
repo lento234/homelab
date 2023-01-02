@@ -11,4 +11,4 @@
     env:
       GLANCES_OPT: "-w"
       TZ: "{{ timezone }}"
-    restart_policy: unless-stopped
+    restart_policy: always

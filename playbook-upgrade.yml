@@ -11,18 +11,12 @@
     # - network/avahi-daemon
 
     # Network filesystem
-    # - system/nfs -> mount nfs share
-
-    # Setup containers
-
-    # Filesystem
-    # - containers/server/fs
+    # - system/mount
 
     # Server
     # - containers/server/portainer
     # - containers/server/watchtower
-    # - containers/server/pihole
-    - containers/server/homer
+    # - containers/server/homer
 
     # Monitoring
     # - containers/monitoring/glances
@@ -31,9 +25,9 @@
     # - containers/media/plex
     # - containers/media/nextcloud
     # - containers/media/photoprism
-    # - containers/media/jellyfin
-    # - containers/media/paperless-ngx
+
     # - containers/media/transmission
+
     # - containers/media/freshrss
 
     # Home automation

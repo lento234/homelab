@@ -1,0 +1,22 @@
+- name: Mount a NFS volume
+  become: true
+  ansible.posix.mount:
+    src: "{{ nas.hostname }}.{{ domain_name }}:{{ nas.store_dir }}/{{ ansible_hostname }}"
+    path: /mnt/store
+    state: mounted
+    fstype: nfs
+
+- name: Install cifs dependencies
+  become: true
+  ansible.builtin.dnf:
+    name: cifs-utils
+    state: latest
+
+- name: Mount a SAMBA share volume
+  become: true
+  ansible.posix.mount:
+    src: "//{{ nas.hostname }}.{{ domain_name }}/{{ nas.share_dir }}"
+    path: /mnt/share
+    state: mounted
+    opts: "username={{ user }},password={{ password }},uid={{ uid }},gid={{ gid }},iocharset=utf8"
+    fstype: cifs

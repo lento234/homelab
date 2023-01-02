@@ -8,6 +8,8 @@ sudo_group: wheel
 nas:
   hostname: ohara
   address: 10.0.0.123
+  store_dir: /mnt/zpool/store
+  share_dir: share
 
 # Locale
 timezone: Europe/Zurich
@@ -41,15 +43,13 @@ python_user_packages:
 docker_users:
   - "{{ user }}"
 
-storage_dir: "/mnt/data"
-
 # Docker volumes
-docker_dir: "{{ storage_dir }}/docker"
+docker_dir: "/mnt/store/docker"
 
 # Media directories
-media_dir: "{{ storage_dir }}/media"
-tv_dir: "{{ storage_dir }}/media/tv"
-movies_dir: "{{ storage_dir }}/media/movies"
+media_dir: "/mnt/share/media"
+tv_dir: "{{ media_dir }}/tv"
+movies_dir: "{{ media_dir }}/movies"
 
 # Ports (tcp, udp)
 ports:

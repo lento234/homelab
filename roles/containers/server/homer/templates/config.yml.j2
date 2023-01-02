@@ -56,12 +56,6 @@ services:
         url: "http://{{ ansible_hostname }}.{{ domain_name }}:32400"
         target: "_blank"
 
-      - name: "Jellyfin"
-        logo: "assets/tools/jellyfin.svg"
-        subtitle: "Stream Movies & TV Shows"
-        url: "http://{{ ansible_hostname }}.{{ domain_name }}:8096"
-        target: "_blank"
-
       - name: "Salt TV"
         logo: "assets/tools/salt-tv.svg"
         subtitle: "Stream TV live and on demand."
@@ -77,12 +71,6 @@ services:
   - name: "File Storage & Sharing"
     icon: "fas fa-folder"
     items:
-      - name: "Paperless-ngx"
-        logo: "assets/tools/paperless-ngx.svg"
-        subtitle: "Document management system"
-        url: "http://{{ ansible_hostname }}.{{ domain_name }}:8001"
-        target: "_blank"
-
       - name: "Nextcloud"
         logo: "assets/tools/nextcloud.png"
         subtitle: "File hosting at home"
@@ -110,12 +98,6 @@ services:
         url: "http://{{ ansible_hostname }}.{{ domain_name }}:61208"
         target: "_blank"
 
-      {# - name: "Netdata"
-        logo: "assets/tools/netdata.png"
-        subtitle: "System Monitoring"
-        url: "http://{{ ansible_hostname }}.{{ domain_name }}:19999"
-        target: "_blank" #}
-
   - name: "Automation"
     icon: "fas fa-cogs"
     items:
@@ -132,18 +114,8 @@ services:
         logo: "assets/tools/portainer.png"
         subtitle: "Docker Container Management"
         url: "http://{{ ansible_hostname }}.{{ domain_name }}:9000"
-        target: "_blank"
-
-      - name: "Pi-hole"
-        logo: "assets/tools/pi-hole.png"
-        url: "http://{{ ansible_hostname }}.{{ domain_name }}:81/admin"
-        type: "PiHole"
-
-      {# - name: "Nginx Proxy Manager"
-        logo: "assets/tools/nginx-proxy-manager.png"
-        subtitle: "Reverse Proxy Manager"
-        url: "http://{{ ansible_hostname }}:8888"
-        target: "_blank" #}
+        type: "Portainer"
+        apikey: "{{ portainer_api_key }}"
 
   - name: "Cluster"
     icon: "fas fa-network-wired"
