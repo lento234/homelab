@@ -44,7 +44,7 @@ docker_users:
   - "{{ user }}"
 
 # Docker volumes
-docker_dir: "/mnt/store/docker"
+docker_dir: "/mnt/data/docker"
 
 # Media directories
 media_dir: "/mnt/data/media"

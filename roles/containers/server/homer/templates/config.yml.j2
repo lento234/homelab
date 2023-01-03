@@ -56,6 +56,12 @@ services:
         url: "http://{{ ansible_hostname }}.{{ domain_name }}:32400"
         target: "_blank"
 
+      - name: "Photoprism"
+        logo: "assets/tools/photoprism.svg"
+        subtitle: "Photo storage at home"
+        url: "http://{{ ansible_hostname }}.{{ domain_name }}:2342"
+        target: "_blank"
+
       - name: "Salt TV"
         logo: "assets/tools/salt-tv.svg"
         subtitle: "Stream TV live and on demand."
@@ -78,22 +84,16 @@ services:
         url: "http://{{ ansible_hostname }}.{{ domain_name }}:8008"
         target: "_blank"
 
-      - name: "Photoprism"
-        logo: "assets/tools/photoprism.svg"
-        subtitle: "Photo storage at home"
-        url: "http://{{ ansible_hostname }}.{{ domain_name }}:2342"
+      - name: "Syncthing"
+        logo: "assets/tools/syncthing.png"
+        subtitle: "File synchronization"
+        url: "http://{{ ansible_hostname }}.{{ domain_name }}:8384"
         target: "_blank"
 
       - name: "Transmission"
         logo: "assets/tools/transmission.svg"
         subtitle: "Bittorrent client"
         url: "http://{{ ansible_hostname }}.{{ domain_name }}:9091"
-        target: "_blank"
-
-      - name: "Syncthing"
-        logo: "assets/tools/syncthing.png"
-        subtitle: "File synchronization"
-        url: "http://{{ ansible_hostname }}.{{ domain_name }}:8384"
         target: "_blank"
 
   - name: "Monitoring"
@@ -127,11 +127,11 @@ services:
   - name: "Cluster"
     icon: "fas fa-network-wired"
     items:
-      - name: "styx"
-        icon: "fas fa-anchor"
-        url: "http://styx:8080"
-
       - name: "{{ nas.hostname }}"
         icon: "fas fa-database"
         url: "http://{{ nas.hostname }}.{{ domain_name}}"
         tag: "nas"
+
+      - name: "styx"
+        icon: "fas fa-anchor"
+        url: "http://styx:8080"
