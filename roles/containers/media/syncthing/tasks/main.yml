@@ -1,0 +1,19 @@
+- name: Deploy syncthing
+  community.docker.docker_container:
+    name: syncthing
+    hostname: "{{ ansible_hostname }}"
+    image: lscr.io/linuxserver/syncthing:latest
+    env:
+      PUID: "{{ uid }}"
+      PGID: "{{ gid }}"
+      TZ: "{{ timezone }}"
+    volumes:
+      - "{{ docker_dir }}/syncthing:/config"
+      - "/mnt/share/Lento:/share"
+      - "/mnt/store:/store"
+    ports:
+      - "8384:8384"
+      - "22000:22000/tcp"
+      - "22000:22000/udp"
+      - "21027:21027/udp"
+    restart_policy: unless-stopped

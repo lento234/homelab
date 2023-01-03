@@ -16,17 +16,18 @@
     # Server
     # - containers/server/portainer
     # - containers/server/watchtower
-    # - containers/server/homer
+    - containers/server/homer
 
     # Monitoring
     # - containers/monitoring/glances
 
     # Media / Storage
-    - containers/media/plex
+    # - containers/media/plex
     # - containers/media/nextcloud
     # - containers/media/photoprism
     # - containers/media/transmission
     # - containers/media/freshrss
+    # - containers/media/syncthing
 
     # Home automation
     # - containers/automation/homeassistant

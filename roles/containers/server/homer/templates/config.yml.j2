@@ -90,6 +90,12 @@ services:
         url: "http://{{ ansible_hostname }}.{{ domain_name }}:9091"
         target: "_blank"
 
+      - name: "Syncthing"
+        logo: "assets/tools/syncthing.png"
+        subtitle: "File synchronization"
+        url: "http://{{ ansible_hostname }}.{{ domain_name }}:8384"
+        target: "_blank"
+
   - name: "Monitoring"
     icon: "fas fa-desktop"
     items:
