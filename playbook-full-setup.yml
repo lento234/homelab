@@ -16,12 +16,7 @@
 
     # Network configuration
     - network/firewalld
-
-    # Autossh configuration
-    - network/autossh
-
-    # Network filesystem
-    - system/nfs
+    - network/avahi-daemon
 
     # Install docker
     - role: geerlingguy.docker
@@ -35,8 +30,6 @@
     # Server
     - containers/server/portainer
     - containers/server/watchtower
-    - containers/server/pihole
-    - containers/server/nginx
     - containers/server/homer
 
     # Monitoring
@@ -47,7 +40,6 @@
     - containers/media/plex
     - containers/media/nextcloud
     - containers/media/photoprism
-    - containers/media/jellyfin
     - containers/media/paperless-ngx
     - containers/media/transmission
     - containers/media/freshrss

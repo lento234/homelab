@@ -3,8 +3,8 @@
 
   roles:
     # Update and install basic packages
-    # - system/packages
-    # - system/upgrade
+    - system/packages
+    - system/upgrade
 
     # Network configuration
     # - network/firewalld
@@ -30,4 +30,5 @@
     # - containers/media/syncthing
 
     # Home automation
-    - containers/automation/homeassistant
+    # - containers/automation/homeassistant
+    # - containers/automation/homebridge

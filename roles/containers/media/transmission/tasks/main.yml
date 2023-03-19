@@ -6,7 +6,7 @@
       PUID: "{{ uid }}"
       PGID: "{{ gid }}"
       TZ: "{{ timezone }}"
-      TRANSMISSION_WEB_HOME: "/combustion-release/"
+      # TRANSMISSION_WEB_HOME: "/combustion-release/"
     volumes:
       - "{{ docker_dir }}/transmission:/config"
       - "{{ media_dir }}:/downloads"

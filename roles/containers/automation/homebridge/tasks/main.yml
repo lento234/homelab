@@ -1,0 +1,14 @@
+- name: Deploy homebridge
+  community.docker.docker_container:
+    name: homebridge
+    image: oznu/homebridge:latest
+    env:
+      TZ: "{{ timezone }}"
+    volumes:
+      - "{{ docker_dir }}/homebridge:/homebridge"
+    network_mode: host
+    restart_policy: unless-stopped
+    log_driver: json-file
+    log_options:
+      max-size: 10mb
+      max-file: 1
