@@ -70,6 +70,7 @@ ports:
   - 8123/tcp  # home assistant
   - 8324/tcp  # plex for roku (optional)
   - 8384/tcp  # syncthing
+  - 8581/tcp  # homebridge
   - 8888/tcp  # nginx dashboard
   - 9000/tcp  # portainer dashboard
   - 9091/tcp  # transmission
