@@ -7,7 +7,7 @@
     # - system/upgrade
 
     # Network configuration
-    - network/avahi-daemon
+    # - network/avahi-daemon
 
     # Network filesystem
     # - system/mount
@@ -22,7 +22,7 @@
     # - containers/server/homer
 
     # Monitoring
-    # - containers/monitoring/glances
+    - containers/monitoring/glances
 
     # Media / Storage
     # - containers/media/plex
@@ -35,3 +35,6 @@
     # Home automation
     # - containers/automation/homeassistant
     # - containers/automation/homebridge
+
+    # Munin
+    # - system/munin

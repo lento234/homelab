@@ -1,0 +1,17 @@
+# Munin configuration
+#
+server {
+	listen 4343 default_server;
+	listen [::]:4343 default_server;
+
+	root /var/cache/munin/www;
+
+	# Add index.php to the list if you are using PHP
+	index index.html index.htm index.nginx-debian.html;
+
+	server_name heimdall;
+
+	location / {
+		try_files $uri $uri/ =404;
+	}
+}

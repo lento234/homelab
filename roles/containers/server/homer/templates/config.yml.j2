@@ -105,6 +105,11 @@ services:
         url: "http://{{ ansible_hostname }}.{{ domain_name }}:61208"
         target: "_blank"
 
+      - name: "Munin"
+        logo: "assets/tools/munin.png"
+        url: "http://{{ ansible_hostname }}.{{ domain_name }}:4343"
+        target: "_blank"
+
   - name: "Automation"
     icon: "fas fa-cogs"
     items:
