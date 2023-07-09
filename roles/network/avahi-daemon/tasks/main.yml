@@ -1,4 +1,4 @@
-- name: Install avahi-daemon and dependencies
+- name: Install avahi-daemon and dependencies in redhat
   become: true
   ansible.builtin.dnf:
     name:
@@ -7,3 +7,14 @@
     state: present
   notify:
     - Restart avahi
+  when: ansible_os_family == 'RedHat'
+
+- name: Install avahi-daemon and dependencies in debian
+  become: true
+  ansible.builtin.apt:
+    name:
+      - avahi-daemon
+    state: present
+  notify:
+    - Restart avahi
+  when: ansible_os_family == 'Debian'

@@ -3,14 +3,12 @@
   ansible.builtin.package:
     name: "{{ packages }}"
     state: present
-
-- name: Install common python packages
-  become: true
-  ansible.builtin.pip:
-    name: "{{ python_packages }}"
-    state: latest
-
-- name: Install user python packages
-  ansible.builtin.pip:
-    name: "{{ python_user_packages }}"
-    state: latest
+# - name: Install common python packages
+#   become: true
+#   ansible.builtin.pip:
+#     name: "{{ python_packages }}"
+#     state: latest
+# - name: Install user python packages
+#   ansible.builtin.pip:
+#     name: "{{ python_user_packages }}"
+#     state: latest

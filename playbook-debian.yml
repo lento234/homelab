@@ -3,15 +3,18 @@
 
   roles:
     # Update and install basic packages
-    - system/packages
+    # - system/packages
     # - system/upgrade
 
     # Network configuration
-    # - network/firewalld
-    # - network/avahi-daemon
+    - network/avahi-daemon
 
     # Network filesystem
-    - system/mount
+    # - system/mount
+
+    # Install docker
+    # - role: geerlingguy.docker
+    #   become: true
 
     # Server
     # - containers/server/portainer

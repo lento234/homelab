@@ -1,6 +1,6 @@
 set export
 
-PLAYBOOK := "playbook-upgrade.yml"
+PLAYBOOK := "playbook-debian.yml"
 DRIVER := "vagrant" # or "vagrant"
 DEBUG_HOSTS := "hosts.ini" # or "hosts_debug.ini"
 VAULT := "group_vars/all/vault.yml"

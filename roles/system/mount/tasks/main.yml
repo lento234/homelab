@@ -1,22 +1,7 @@
-- name: Mount a NFS volume
+- name: Mount data dir by UUID
   become: true
   ansible.posix.mount:
-    src: "{{ nas.hostname }}.{{ domain_name }}:{{ nas.store_dir }}/{{ ansible_hostname }}"
-    path: /mnt/store
+    path: "{{ data_dir.path }}"
+    src: UUID="{{ data_dir.uuid }}"
+    fstype: ext4
     state: mounted
-    fstype: nfs
-
-- name: Install cifs dependencies
-  become: true
-  ansible.builtin.dnf:
-    name: cifs-utils
-    state: latest
-
-- name: Mount a SAMBA share volume
-  become: true
-  ansible.posix.mount:
-    src: "//{{ nas.hostname }}.{{ domain_name }}/{{ nas.share_dir }}"
-    path: /mnt/share
-    state: mounted
-    opts: "username={{ user }},password={{ password }},uid={{ uid }},gid={{ gid }},iocharset=utf8"
-    fstype: cifs

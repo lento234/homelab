@@ -23,9 +23,12 @@ packages:
   - neofetch
   - nmap
   - python3-pip
+  - python3-requests
   - rsync
+  - smbclient
   - tmux
   - tree
+  - vim
   - wget
   - zsh
 
@@ -43,49 +46,53 @@ python_user_packages:
 docker_users:
   - "{{ user }}"
 
+data_dir:
+  path: "/mnt/data"
+  uuid: "9a6577e3-57bb-44d4-b55e-3e02cc7876ed"
+
 # Docker volumes
-docker_dir: "/mnt/data/docker"
+docker_dir: "{{ data_dir.path }}/docker"
 
 # Media directories
-media_dir: "/mnt/data/media"
+media_dir: "{{ data_dir.path }}/media"
 tv_dir: "{{ media_dir }}/tv"
 movies_dir: "{{ media_dir }}/movies"
 
 # Ports (tcp, udp)
 ports:
   # - 22/tcp    # ssh (disabled)
-  - 53/tcp    # dns (pi-hole)
-  - 53/udp    # dns (pi-hole)
-  - 80/tcp    # http
-  - 81/tcp    # pi-hole dashboard
-  - 443/tcp   # https
-  - 1900/udp  # Plex DLNA Server
-  - 2342/tcp  # Photoprism
-  - 5353/udp  # bonjour / avahi network discovery
-  - 8000/tcp  # portainer
-  - 8001/tcp  # paperless-ngx
-  - 8008/tcp  # nextcloud dashboard
-  - 8080/tcp  # homer dashboard
-  - 8096/tcp  # jellyfin
-  - 8123/tcp  # home assistant
-  - 8324/tcp  # plex for roku (optional)
-  - 8384/tcp  # syncthing
-  - 8581/tcp  # homebridge
-  - 8888/tcp  # nginx dashboard
-  - 9000/tcp  # portainer dashboard
-  - 9091/tcp  # transmission
+  - 53/tcp # dns (pi-hole)
+  - 53/udp # dns (pi-hole)
+  - 80/tcp # http
+  - 81/tcp # pi-hole dashboard
+  - 443/tcp # https
+  - 1900/udp # Plex DLNA Server
+  - 2342/tcp # Photoprism
+  - 5353/udp # bonjour / avahi network discovery
+  - 8000/tcp # portainer
+  - 8001/tcp # paperless-ngx
+  - 8008/tcp # nextcloud dashboard
+  - 8080/tcp # homer dashboard
+  - 8096/tcp # jellyfin
+  - 8123/tcp # home assistant
+  - 8324/tcp # plex for roku (optional)
+  - 8384/tcp # syncthing
+  - 8581/tcp # homebridge
+  - 8888/tcp # nginx dashboard
+  - 9000/tcp # portainer dashboard
+  - 9091/tcp # transmission
   - 11111/tcp # freshrss
-  - 19999/tcp   # netdata dashboard
-  - 22000/tcp   # syncthing
-  - 22000/udp   # syncthing
-  - 21027/udp   # syncthing
-  - 32400/tcp   # Plex Media Server
-  - 32410/udp   # current GDM network discovery
-  - 32469/tcp   # Plex DLNA Server
-  - 51413/tcp   # transmission
-  - 51413/udp   # transmission
-  - 61208/tcp   # glances
-  - 61209/tcp   # glances
+  - 19999/tcp # netdata dashboard
+  - 22000/tcp # syncthing
+  - 22000/udp # syncthing
+  - 21027/udp # syncthing
+  - 32400/tcp # Plex Media Server
+  - 32410/udp # current GDM network discovery
+  - 32469/tcp # Plex DLNA Server
+  - 51413/tcp # transmission
+  - 51413/udp # transmission
+  - 61208/tcp # glances
+  - 61209/tcp # glances
 
 services:
   - dns
@@ -98,7 +105,6 @@ services:
   - rsyncd
   - ssh
   - transmission-client
-
 #### Secrets in vault.yml (add to vault.yml)
 
 # password: ""
