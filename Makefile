@@ -2,7 +2,7 @@
 help:
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-15s\033[0m %s\n", $$1, $$2}'
 
-PLAYBOOK=playbook-debian.yml
+PLAYBOOK=playbook.yml
 HOSTS=hosts.ini
 VAULT=group_vars/all/vault.yml
 VAULT_PASSWORD_FILE=pass.key

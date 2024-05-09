@@ -1,6 +1,0 @@
-- name: Playbook to manage all infra
-  hosts: homelab
-
-  roles:
-    - system/upgrade
-    - system/packages
