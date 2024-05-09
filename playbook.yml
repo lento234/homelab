@@ -23,7 +23,7 @@
 
     # Monitoring
     # - containers/monitoring/glances
-    - containers/monitoring/netdata
+    # - containers/monitoring/netdata
 
     # Media / Storage
     # - containers/media/plex
@@ -32,6 +32,7 @@
     # - containers/media/transmission
     # - containers/media/freshrss
     # - containers/media/syncthing
+    # - containers/media/gitea
 
     # Home automation
     # - containers/automation/homeassistant

@@ -1,0 +1,16 @@
+- name: Deploy gitea
+  community.docker.docker_container:
+    name: gitea
+    image: gitea/gitea:1.19.0
+    env:
+      PUID: "{{ uid }}"
+      PGID: "{{ gid }}"
+      TZ: "{{ timezone }}"
+    volumes:
+      - "{{ docker_dir }}/gitea:/data"
+      - "/etc/timezone:/etc/timezone:ro"
+      - "/etc/localtime:/etc/localtime:ro"
+    ports:
+      - "3000:3000"
+      - "222:22"
+    restart_policy: unless-stopped

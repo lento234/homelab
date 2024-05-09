@@ -65,9 +65,11 @@ ports:
   - 53/udp # dns (pi-hole)
   - 80/tcp # http
   - 81/tcp # pi-hole dashboard
+  - 222/tcp   # gitea
   - 443/tcp # https
   - 1900/udp # Plex DLNA Server
   - 2342/tcp # Photoprism
+  - 3000/tcp  # gitea
   - 5353/udp # bonjour / avahi network discovery
   - 8000/tcp # portainer
   - 8001/tcp # paperless-ngx
@@ -105,6 +107,7 @@ services:
   - rsyncd
   - ssh
   - transmission-client
+
 #### Secrets in vault.yml (add to vault.yml)
 
 # password: ""
