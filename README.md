@@ -4,10 +4,7 @@
     <img width="500" align="center" src="assets/homelab-logo.svg">
 </h1>
 
-![Molecule CI](https://img.shields.io/github/actions/workflow/status/lento234/homelab/ci.yml?style=flat-square&labelColor=black)
 [![License](https://img.shields.io/badge/license-MIT-blue?style=flat-square&labelColor=000000)](#license)
-
-![Rocky Linux](https://img.shields.io/badge/-Rocky%20Linux-%2310B981?style=for-the-badge&logo=rockylinux&logoColor=white)
 ![Raspberry Pi](https://img.shields.io/badge/-RaspberryPi-C51A4A?style=for-the-badge&logo=Raspberry-Pi)
 
 ***`Ansible`-based personal homelab setup.***
@@ -16,13 +13,15 @@
 
 ## Description
 
-The project contains a set of ansible playbooks use to setup (and manage) a personal homelab infrastructure. The homelab runs on a Raspberry Pi 4 running on Rocky Linux. Currently using `nord` [theme](https://www.nordtheme.com/).
+The project contains a set of ansible playbooks use to setup (and manage) a
+personal homelab infrastructure. The homelab runs on a Raspberry Pi 4 running
+on Debian.
 
 ![Homepage](assets/homepage.png)
 
 ## Setup
 
-1. Setup virtual environment using `uv`:
+1. Setup virtual environment using [uv](https://github.com/astral-sh/uv):
 
 ```bash
 uv venv
@@ -106,10 +105,9 @@ $ make dry-run
 ## Hardware / software stack
 
 * [x] Raspberry Pi 4 Model B 8GB: [OKdo](https://www.okdo.com/p/okdo-raspberry-pi-4-8gb-model-b-starter-kit/)
-* [x] OS: Rocky Linux 8.5 [wiki](https://wiki.rockylinux.org/en/special-interest-groups/alt-arch/raspberry-pi)
+* [x] OS: Debian bookworm (12)
 * [x] Storage - (primary) Sandisk microSDXC 128GB (`/`, `ext4`)
 * [x] Storage - (data) ZFS pool ~40 TB (`/mnt/store/`)
-
 
 ## References
 
