@@ -1,14 +1,10 @@
 - name: Deploy watchtower
   community.docker.docker_container:
     name: watchtower
-    image: containrrr/watchtower
+    image: containrrr/watchtower:latest
     env:
       TZ: "{{ timezone }}"
       WATCHTOWER_CLEANUP: "true"
-      WATCHTOWER_NOTIFICATIONS: "slack"
-      WATCHTOWER_NOTIFICATION_SLACK_HOOK_URL: "{{ slack_hook_url }}"
-      WATCHTOWER_NOTIFICATION_SLACK_IDENTIFIER: "watchtower"
-      WATCHTOWER_NOTIFICATION_SLACK_CHANNEL: "#{{ ansible_hostname }}"
     command: --schedule "0 0 4 * * *"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock

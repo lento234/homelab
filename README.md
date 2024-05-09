@@ -20,6 +20,54 @@ The project contains a set of ansible playbooks use to setup (and manage) a pers
 
 ![Homepage](assets/homepage.png)
 
+## Setup
+
+1. Setup virtual environment using `uv`:
+
+```bash
+uv venv
+source .venv/bin/activate
+```
+
+2. Install python dependencies (incl. ansible):
+
+```bash
+uv pip install -r requirement.txt
+```
+
+3. Use the `make` command runner to setup the homelab:
+
+```bash
+$ make
+dry-run         Dry-run default playbook
+ping            Ping all hosts
+pre-commit      Run pre-commit on all files
+run             Run default playbook run
+vault-create    Create the secret vault file vault
+vault           Edit the secret vault file vault
+```
+
+4. Add hosts into the `hosts.ini` file (example):
+
+```
+[homelab]
+heimdall ansible_python_interpreter=/usr/libexec/platform-python
+```
+
+5. Modify group vars file `group_vars/all/vars.yml`
+
+6. Create and edit vault secrets:
+
+```bash
+$ make vault-create
+```
+
+7. Run `dry-run` or `run` to deploy the infrastructure.
+
+```bash
+$ make dry-run
+```
+
 ## Hosted services
 
 **Server management**
@@ -35,6 +83,7 @@ The project contains a set of ansible playbooks use to setup (and manage) a pers
 **Monitoring**
 
 * [x] [Glances](https://nicolargo.github.io/glances) - An *Eye* on your system.
+* [x] Munin
 
 **Media**
 
@@ -60,38 +109,6 @@ The project contains a set of ansible playbooks use to setup (and manage) a pers
 * [x] OS: Rocky Linux 8.5 [wiki](https://wiki.rockylinux.org/en/special-interest-groups/alt-arch/raspberry-pi)
 * [x] Storage - (primary) Sandisk microSDXC 128GB (`/`, `ext4`)
 * [x] Storage - (data) ZFS pool ~40 TB (`/mnt/store/`)
-
-
-## Setup
-
-1. Use the `just` command runner to setup the homelab:
-
-```
-$ just
-
-Available recipes:
-    create     # Create/start a local development server
-    destroy    # Destroy the local development server
-    dry-run    # Dry-run default playbook
-    help       # display help information
-    login      # Login into the local development server
-    ping       # Ping all hosts
-    pre-commit # Run pre-commit on all files
-    run        # Run default playbook
-    test       # Test inside the local development server
-    vault      # Edit the secret vault file
-```
-
-2. Add hosts into the `hosts.ini` file (example):
-
-```
-[homelab]
-heimdall ansible_python_interpreter=/usr/libexec/platform-python
-```
-
-3. Modify group vars file `group_vars/all/vars.yml`
-
-4. Run `just dry-run` or `just run` to deploy the infrastructure.
 
 
 ## References

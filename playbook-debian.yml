@@ -3,8 +3,8 @@
 
   roles:
     # Update and install basic packages
-    # - system/packages
-    # - system/upgrade
+    - system/packages
+    - system/upgrade
 
     # Network configuration
     # - network/avahi-daemon
@@ -22,7 +22,7 @@
     # - containers/server/homer
 
     # Monitoring
-    - containers/monitoring/glances
+    # - containers/monitoring/glances
 
     # Media / Storage
     # - containers/media/plex

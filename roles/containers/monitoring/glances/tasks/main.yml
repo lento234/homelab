@@ -1,7 +1,7 @@
 - name: Deploy Glances
   community.docker.docker_container:
     name: glances
-    image: nicolargo/glances
+    image: nicolargo/glances:latest
     volumes:
       - "/var/run/docker.sock:/var/run/docker.sock:ro"
     pid_mode: host

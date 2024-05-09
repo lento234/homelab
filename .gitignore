@@ -1,9 +1,6 @@
 .DS_Store
 
 .vagrant/
-hosts.ini
-hosts_debug.ini
-vault.yml
 pass.key
 
 venv/
