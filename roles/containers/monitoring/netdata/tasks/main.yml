@@ -1,7 +1,7 @@
 - name: Deploy netdata
   community.docker.docker_container:
     name: netdata
-    image: netdata/netdata
+    image: netdata/netdata:latest
     hostname: "{{ ansible_hostname }}.{{ domain_name }}"
     state: started
     pull: true
