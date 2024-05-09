@@ -4,10 +4,7 @@
     <img width="500" align="center" src="assets/homelab-logo.svg">
 </h1>
 
-![Molecule CI](https://img.shields.io/github/actions/workflow/status/lento234/homelab/ci.yml?style=flat-square&labelColor=black)
 [![License](https://img.shields.io/badge/license-MIT-blue?style=flat-square&labelColor=000000)](#license)
-
-![Rocky Linux](https://img.shields.io/badge/-Rocky%20Linux-%2310B981?style=for-the-badge&logo=rockylinux&logoColor=white)
 ![Raspberry Pi](https://img.shields.io/badge/-RaspberryPi-C51A4A?style=for-the-badge&logo=Raspberry-Pi)
 
 ***`Ansible`-based personal homelab setup.***
@@ -16,9 +13,59 @@
 
 ## Description
 
-The project contains a set of ansible playbooks use to setup (and manage) a personal homelab infrastructure. The homelab runs on a Raspberry Pi 4 running on Rocky Linux. Currently using `nord` [theme](https://www.nordtheme.com/).
+The project contains a set of ansible playbooks use to setup (and manage) a
+personal homelab infrastructure. The homelab runs on a Raspberry Pi 4 running
+on Debian.
 
 ![Homepage](assets/homepage.png)
+
+## Setup
+
+1. Setup virtual environment using [uv](https://github.com/astral-sh/uv):
+
+```bash
+uv venv
+source .venv/bin/activate
+```
+
+2. Install python dependencies (incl. ansible):
+
+```bash
+uv pip install -r requirement.txt
+```
+
+3. Use the `make` command runner to setup the homelab:
+
+```bash
+$ make
+dry-run         Dry-run default playbook
+ping            Ping all hosts
+pre-commit      Run pre-commit on all files
+run             Run default playbook run
+vault-create    Create the secret vault file vault
+vault           Edit the secret vault file vault
+```
+
+4. Add hosts into the `hosts.ini` file (example):
+
+```
+[homelab]
+heimdall ansible_python_interpreter=/usr/libexec/platform-python
+```
+
+5. Modify group vars file `group_vars/all/vars.yml`
+
+6. Create and edit vault secrets:
+
+```bash
+$ make vault-create
+```
+
+7. Run `dry-run` or `run` to deploy the infrastructure.
+
+```bash
+$ make dry-run
+```
 
 ## Hosted services
 
@@ -35,6 +82,7 @@ The project contains a set of ansible playbooks use to setup (and manage) a pers
 **Monitoring**
 
 * [x] [Glances](https://nicolargo.github.io/glances) - An *Eye* on your system.
+* [x] Munin
 
 **Media**
 
@@ -57,42 +105,9 @@ The project contains a set of ansible playbooks use to setup (and manage) a pers
 ## Hardware / software stack
 
 * [x] Raspberry Pi 4 Model B 8GB: [OKdo](https://www.okdo.com/p/okdo-raspberry-pi-4-8gb-model-b-starter-kit/)
-* [x] OS: Rocky Linux 8.5 [wiki](https://wiki.rockylinux.org/en/special-interest-groups/alt-arch/raspberry-pi)
+* [x] OS: Debian bookworm (12)
 * [x] Storage - (primary) Sandisk microSDXC 128GB (`/`, `ext4`)
 * [x] Storage - (data) ZFS pool ~40 TB (`/mnt/store/`)
-
-
-## Setup
-
-1. Use the `just` command runner to setup the homelab:
-
-```
-$ just
-
-Available recipes:
-    create     # Create/start a local development server
-    destroy    # Destroy the local development server
-    dry-run    # Dry-run default playbook
-    help       # display help information
-    login      # Login into the local development server
-    ping       # Ping all hosts
-    pre-commit # Run pre-commit on all files
-    run        # Run default playbook
-    test       # Test inside the local development server
-    vault      # Edit the secret vault file
-```
-
-2. Add hosts into the `hosts.ini` file (example):
-
-```
-[homelab]
-heimdall ansible_python_interpreter=/usr/libexec/platform-python
-```
-
-3. Modify group vars file `group_vars/all/vars.yml`
-
-4. Run `just dry-run` or `just run` to deploy the infrastructure.
-
 
 ## References
 

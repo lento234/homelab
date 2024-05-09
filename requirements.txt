@@ -1,5 +1,5 @@
 ansible
 docker
-docker-compose
+molecule
+molecule-plugins[docker]
 pre-commit
-molecule[docker]

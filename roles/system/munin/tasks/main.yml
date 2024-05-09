@@ -1,0 +1,21 @@
+- name: Install munin
+  become: true
+  ansible.builtin.apt:
+    name:
+      - nginx
+      - munin
+      - munin-node
+    state: latest
+  notify: Restart munin
+  when: ansible_os_family == 'Debian'
+
+- name: Setup nginx
+  become: true
+  ansible.builtin.copy:
+    src: files/default
+    dest: "/etc/nginx/sites-available/default"
+    owner: root
+    group: root
+    mode: "u=rw,g=r,o=r"
+  notify: Restart nginx
+  when: ansible_os_family == 'Debian'

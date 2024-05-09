@@ -1,0 +1,16 @@
+- name: Restart munin
+  become: true
+  ansible.builtin.service:
+    name: "{{ item }}"
+    enabled: true
+    state: restarted
+  with_items:
+    - munin
+    - munin-node
+
+- name: Restart nginx
+  become: true
+  ansible.builtin.service:
+    name: nginx
+    enabled: true
+    state: restarted

@@ -7,11 +7,14 @@
     - system/upgrade
 
     # Network configuration
-    # - network/firewalld
     # - network/avahi-daemon
 
     # Network filesystem
     # - system/mount
+
+    # Install docker
+    # - role: geerlingguy.docker
+    #   become: true
 
     # Server
     # - containers/server/portainer
@@ -32,3 +35,6 @@
     # Home automation
     # - containers/automation/homeassistant
     # - containers/automation/homebridge
+
+    # Munin
+    # - system/munin
