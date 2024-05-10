@@ -1,0 +1,37 @@
+- name: Check if the persistent data folder exists
+  ansible.builtin.stat:
+    path: "{{ docker_dir }}/prometheus/etc"
+  register: persistent_data
+
+- name: Create the persistent data folder for docker containers
+  become: true
+  ansible.builtin.file:
+    dest: "{{ docker_dir }}/prometheus/etc"
+    state: directory
+    owner: "{{ user }}"
+    group: "{{ group }}"
+    mode: 0755
+    recurse: true
+  when: not persistent_data.stat.exists
+
+- name: Copy config files to prometheus
+  ansible.builtin.template:
+    src: prometheus.yml.j2
+    dest: "{{ docker_dir }}/prometheus/etc/prometheus.yml"
+    owner: "{{ user }}"
+    group: "{{ group }}"
+    mode: "0644"
+
+- name: Deploy prometheus
+  community.docker.docker_container:
+    name: prometheus
+    image: prom/prometheus:latest
+    state: started
+    pull: true
+    command: --config.file=/config/prometheus.yml
+    ports:
+      - "9090:9090"
+    volumes:
+      - "{{ docker_dir }}/prometheus/etc:/config"
+      - "{{ docker_dir }}/prometheus/data:/prometheus"
+    restart_policy: unless-stopped

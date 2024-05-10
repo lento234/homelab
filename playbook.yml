@@ -24,6 +24,7 @@
     # Monitoring
     # - containers/monitoring/glances
     # - containers/monitoring/netdata
+    - containers/monitoring/prometheus
 
     # Media / Storage
     # - containers/media/plex
